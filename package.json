@@ -1,0 +1,16 @@
+{
+  "name": "supreme-nutrition-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Supreme Nutrition — Fat Loss Kit single-product landing page (HTML + Tailwind CSS + Razorpay + WhatsApp)",
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i src/input.css -o assets/css/styles.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i src/input.css -o assets/css/styles.css --watch",
+    "build": "npm run build:css",
+    "start": "node optional-backend/server.js"
+  },
+  "engines": { "node": ">=18" },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
