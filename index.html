@@ -19,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/cutcore-bottle.webp" type="image/webp">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 
   <script>document.documentElement.classList.add('js');</script>
 
@@ -123,12 +124,26 @@
           <span class="ember" style="left:64%;animation-delay:4.8s;--dx:-18px" aria-hidden="true"></span>
           <span class="ember" style="left:75%;animation-delay:6.6s;--dx:30px" aria-hidden="true"></span>
 
-          <div class="bottle-tilt enter" data-tilt>
-            <div class="bottle-float">
-              <div class="bottle">
-                <img src="assets/img/cutcore-bottle.webp" width="763" height="1468" alt="Supreme Nutrition CutCORE Metabolic Capsules — 30 veg capsules bottle" fetchpriority="high" decoding="async">
-              </div>
-            </div>
+          <div class="bottle-slot">
+            <model-viewer
+              class="bottle-model"
+              src="assets/img/sumpreme-nutriition.glb"
+              poster="assets/img/cutcore-bottle.webp"
+              alt="Supreme Nutrition CutCORE Metabolic Capsules — 30 veg capsules bottle"
+              camera-controls
+              auto-rotate
+              rotation-per-second="16deg"
+              camera-orbit="120deg 78deg 118%"
+              max-camera-orbit="auto 180deg 180%"
+              field-of-view="23deg"
+              disable-pan
+              touch-action="pan-y"
+              shadow-intensity="0.85"
+              exposure="1.15"
+              environment-image="neutral"
+              interaction-prompt="auto"
+              loading="eager">
+            </model-viewer>
             <div class="chip-float -left-4 top-[22%] lg:-left-14" aria-hidden="true"><b>Inside the kit</b>CutCore · 30 veg capsules</div>
             <div class="chip-float -right-2 bottom-[26%] lg:-right-12" aria-hidden="true"><b>Label</b>Full ingredient disclosure</div>
           </div>
@@ -392,15 +407,22 @@
     <section id="order" class="section bg-stage relative overflow-hidden" aria-labelledby="order-title">
       <div class="wrap">
         <div class="reveal max-w-2xl">
-          <p class="eyebrow">Order</p>
-          <h2 id="order-title" class="h2">Start your <span class="text-brand">30-day program.</span></h2>
-          <p class="lead">Pay securely with Razorpay — or send your order enquiry on WhatsApp.</p>
+          <p class="eyebrow">Checkout</p>
+          <h2 id="order-title" class="h2">Buy the <span class="text-brand">fat loss kit.</span></h2>
+          <p class="lead">This is where you place the order. Choose how many kits you want, then pay with Razorpay or send the same order on WhatsApp.</p>
         </div>
 
         <div class="mt-12 grid gap-6 lg:grid-cols-[1fr_0.85fr] lg:items-start">
           <!-- Form -->
           <form id="checkout-form" data-checkout class="reveal card p-6 sm:p-9" novalidate autocomplete="on" aria-describedby="checkout-status">
-            <h3 class="text-xl font-bold"><span data-api-only>Delivery details</span><span data-static-only>Choose quantity</span></h3>
+            <h3 class="text-xl font-bold">Complete your purchase</h3>
+            <div class="mt-5 flex flex-wrap items-end justify-between gap-x-6 gap-y-2 border-b border-white/10 pb-5">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-mute">Order total</p>
+                <p class="mt-1 text-4xl font-extrabold tracking-tight text-white" data-card-total>₹3,499</p>
+              </div>
+              <p class="pb-1 text-sm text-mute"><span class="line-through">MRP ₹3,999</span> per kit · taxes included · free shipping</p>
+            </div>
             <div class="mt-6 grid gap-x-5 gap-y-4 sm:grid-cols-2">
               <div data-api-only>
                 <label class="label" for="f-name">Full name</label>
@@ -450,12 +472,12 @@
             <div class="mt-8 flex flex-col gap-3 sm:flex-row">
               <button type="submit" class="btn btn-primary flex-1" id="pay-btn">
                 <span class="spinner hidden" aria-hidden="true" data-spinner></span>
-                <span data-pay-label>Buy Now — ₹3,499</span>
+                <span data-pay-label>Buy Now</span>
               </button>
               <button type="button" class="btn btn-wa flex-1" data-wa>Order on WhatsApp</button>
             </div>
             <div id="checkout-status" class="mt-5 hidden rounded-2xl border p-4 text-sm leading-relaxed" role="status" aria-live="polite" tabindex="-1"></div>
-            <p class="mt-5 text-xs leading-relaxed text-mute" data-static-only>Buy Now opens Razorpay’s secure payment page, where you enter your delivery details and pay. Payment confirmation is sent by Razorpay. If you have already paid, please don’t place a second order on WhatsApp.</p>
+            <p class="mt-5 text-xs leading-relaxed text-mute" data-static-only>Buy Now opens Razorpay, where you enter your delivery address and pay. Your order is confirmed only after Razorpay sends the payment receipt. If you have already paid, don’t send a second order on WhatsApp.</p>
             <p class="mt-5 text-xs leading-relaxed text-mute" data-api-only>Payments are processed by Razorpay and confirmed on our server. Your order is marked paid only after the payment signature is verified. If you have already paid, please don’t place a second order on WhatsApp.</p>
           </form>
 

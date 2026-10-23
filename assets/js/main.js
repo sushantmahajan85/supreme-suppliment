@@ -35,22 +35,49 @@
     reveals.forEach(function (el) { io.observe(el); });
   } else { reveals.forEach(function (el) { el.classList.add('in'); }); }
 
-  /* ------------------------------ Pointer tilt (desktop only) ------------------------------ */
+  /* ------------------------------ Pointer tilt (photo fallback only) ------------------------------ */
+  var viewer = $('model-viewer');
+  if (viewer && reduceMotion) viewer.removeAttribute('auto-rotate');
+
   var stage = $('[data-stage]');
   var tilt = $('[data-tilt]');
-  if (stage && tilt && !reduceMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    var raf = 0;
-    stage.addEventListener('pointermove', function (e) {
+  if (stage && tilt && !reduceMotion) {
+    var targetX = 0;
+    var targetY = 0;
+    var curX = 0;
+    var curY = 0;
+    var pointing = false;
+
+    function aim(e) {
       var r = stage.getBoundingClientRect();
-      var x = (e.clientX - r.left) / r.width - 0.5;
-      var y = (e.clientY - r.top) / r.height - 0.5;
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(function () {
-        tilt.style.setProperty('--ry', (x * 12).toFixed(2) + 'deg');
-        tilt.style.setProperty('--rx', (-y * 8).toFixed(2) + 'deg');
-      });
-    });
-    stage.addEventListener('pointerleave', function () { tilt.style.setProperty('--ry', '0deg'); tilt.style.setProperty('--rx', '0deg'); });
+      targetX = Math.max(-0.5, Math.min(0.5, (e.clientX - r.left) / r.width - 0.5));
+      targetY = Math.max(-0.5, Math.min(0.5, (e.clientY - r.top) / r.height - 0.5));
+      pointing = true;
+    }
+    function release() { pointing = false; }
+
+    stage.addEventListener('pointermove', aim);
+    stage.addEventListener('pointerdown', aim);
+    stage.addEventListener('pointerleave', release);
+    stage.addEventListener('pointercancel', release);
+
+    (function frame(now) {
+      var tx = targetX;
+      var ty = targetY;
+      if (!pointing) {
+        var t = now / 1000;
+        tx = Math.sin(t * 0.55) * 0.22;
+        ty = Math.cos(t * 0.38) * 0.1;
+      }
+      curX += (tx - curX) * 0.14;
+      curY += (ty - curY) * 0.14;
+      tilt.style.setProperty('--ry', (curX * 42).toFixed(2) + 'deg');
+      tilt.style.setProperty('--rx', (-curY * 22).toFixed(2) + 'deg');
+      tilt.style.setProperty('--lx', (48 - curX * 80).toFixed(1) + '%');
+      tilt.style.setProperty('--ly', (20 - curY * 40).toFixed(1) + '%');
+      tilt.style.setProperty('--sx', (-curX * 46).toFixed(1));
+      requestAnimationFrame(frame);
+    })(performance.now());
   }
 
   /* ------------------------------ FAQ accordion ------------------------------ */
@@ -108,7 +135,8 @@
     qtyOut.textContent = qty;
     $('[data-sum-qty]').textContent = qty;
     $('[data-total]').textContent = money(total);
-    payLabel.textContent = 'Buy Now — ' + money(total);
+    $('[data-card-total]').textContent = money(total);
+    payLabel.textContent = 'Buy Now';
   }
   $$('[data-qty]').forEach(function (b) {
     b.addEventListener('click', function () {
