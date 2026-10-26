@@ -10,7 +10,7 @@ window.SITE_CONFIG = {
   contactEmail: 'supremenutrition17@gmail.com',
 
   productName: 'Fat loss kit — 30-day program',
-  productOption: 'Standard kit — CutCore, Appetite Control, L-Carnitine 3000 (orange & berry blast)',
+  productOption: 'Standard kit — CutCore, Appetite Control, L-Carnitine 3000 (orange & strawberry)',
 
   // Display values (the real amount is set on the Razorpay link/page or by the backend).
   unitPrice: 3499,

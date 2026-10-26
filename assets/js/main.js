@@ -35,50 +35,162 @@
     reveals.forEach(function (el) { io.observe(el); });
   } else { reveals.forEach(function (el) { el.classList.add('in'); }); }
 
-  /* ------------------------------ Pointer tilt (photo fallback only) ------------------------------ */
-  var viewer = $('model-viewer');
-  if (viewer && reduceMotion) viewer.removeAttribute('auto-rotate');
+  /* ------------------------------ Hero gallery (infinite sliding carousel) ------------------------------ */
+  var gal = $('[data-gallery]');
+  if (gal) {
+    var gStage = $('[data-gal-stage]', gal);
+    var gTrack = $('[data-gal-track]', gal);
+    var gSlides = $$('.gal-slide', gal);
+    var gThumbs = $$('[data-gal-thumb]', gal);
+    var gStrip = $('.gal-thumbs', gal);
+    var gCap = $('[data-gal-cap]', gal);
+    var gCount = $('[data-gal-count]', gal);
+    var gBar = $('[data-gal-bar]', gal);
+    var gN = gSlides.length;
+    var GAL_MS = 3000;
+    var gIdx = 0;
+    var gPrevPos = [];
+    var gTimer = null;
+    var gHold = { hover: false, focus: false, drag: false, hidden: false, away: false };
 
-  var stage = $('[data-stage]');
-  var tilt = $('[data-tilt]');
-  if (stage && tilt && !reduceMotion) {
-    var targetX = 0;
-    var targetY = 0;
-    var curX = 0;
-    var curY = 0;
-    var pointing = false;
-
-    function aim(e) {
-      var r = stage.getBoundingClientRect();
-      targetX = Math.max(-0.5, Math.min(0.5, (e.clientX - r.left) / r.width - 0.5));
-      targetY = Math.max(-0.5, Math.min(0.5, (e.clientY - r.top) / r.height - 0.5));
-      pointing = true;
+    function galPos(i) {
+      var off = (((i - gIdx) % gN) + gN) % gN;
+      if (off > gN / 2) off -= gN;
+      return Math.max(-1, Math.min(1, off));
     }
-    function release() { pointing = false; }
 
-    stage.addEventListener('pointermove', aim);
-    stage.addEventListener('pointerdown', aim);
-    stage.addEventListener('pointerleave', release);
-    stage.addEventListener('pointercancel', release);
-
-    (function frame(now) {
-      var tx = targetX;
-      var ty = targetY;
-      if (!pointing) {
-        var t = now / 1000;
-        tx = Math.sin(t * 0.55) * 0.22;
-        ty = Math.cos(t * 0.38) * 0.1;
+    function galRender(dragPx) {
+      var snap = [];
+      gSlides.forEach(function (s, i) {
+        var c = galPos(i);
+        var cross = gPrevPos[i] !== undefined && Math.abs(c - gPrevPos[i]) > 1.5;
+        if (cross || gPrevPos[i] === undefined) { s.classList.add('no-anim'); snap.push(s); }
+        gPrevPos[i] = c;
+        s.style.transform = 'translate3d(calc(' + (c * 100) + '% + ' + (dragPx || 0) + 'px),0,0)';
+        var cur = c === 0;
+        s.classList.toggle('is-current', cur);
+        s.setAttribute('aria-hidden', String(!cur));
+        $('.gal-open', s).tabIndex = cur ? 0 : -1;
+      });
+      if (snap.length) {
+        void gStage.offsetWidth;
+        requestAnimationFrame(function () { snap.forEach(function (s) { s.classList.remove('no-anim'); }); });
       }
-      curX += (tx - curX) * 0.14;
-      curY += (ty - curY) * 0.14;
-      tilt.style.setProperty('--ry', (curX * 42).toFixed(2) + 'deg');
-      tilt.style.setProperty('--rx', (-curY * 22).toFixed(2) + 'deg');
-      tilt.style.setProperty('--lx', (48 - curX * 80).toFixed(1) + '%');
-      tilt.style.setProperty('--ly', (20 - curY * 40).toFixed(1) + '%');
-      tilt.style.setProperty('--sx', (-curX * 46).toFixed(1));
-      requestAnimationFrame(frame);
-    })(performance.now());
+    }
+
+    function galUi(scrollStrip) {
+      var t = gThumbs[gIdx];
+      var label = t.getAttribute('aria-label').replace(/^Show /, '');
+      gCap.textContent = label;
+      gCount.textContent = (gIdx + 1) + ' / ' + gN;
+      gThumbs.forEach(function (b, n) {
+        b.classList.toggle('is-active', n === gIdx);
+        b.setAttribute('aria-pressed', String(n === gIdx));
+      });
+      if (scrollStrip) {
+        gStrip.scrollTo({ left: t.offsetLeft - (gStrip.clientWidth - t.clientWidth) / 2, behavior: reduceMotion ? 'auto' : 'smooth' });
+      }
+    }
+
+    function galGo(i, scrollStrip) {
+      gIdx = ((i % gN) + gN) % gN;
+      galRender(0);
+      galUi(scrollStrip !== false);
+      galSchedule();
+    }
+
+    function galHeld() { return reduceMotion || Object.keys(gHold).some(function (k) { return gHold[k]; }); }
+    function galSchedule() {
+      clearTimeout(gTimer);
+      gBar.classList.remove('run', 'hold');
+      if (galHeld()) return;
+      void gBar.offsetWidth;
+      gBar.style.setProperty('--gal-ms', GAL_MS + 'ms');
+      gBar.classList.add('run');
+      gTimer = setTimeout(function () { galGo(gIdx + 1); }, GAL_MS);
+    }
+    function galHold(key, on) {
+      if (gHold[key] === on) return;
+      gHold[key] = on;
+      if (on) { clearTimeout(gTimer); gBar.classList.add('hold'); }
+      else if (!galHeld()) galSchedule();
+    }
+
+    /* Warm every slide so nothing is blank mid-slide */
+    function galWarm() { $$('img', gal).forEach(function (im) { im.loading = 'eager'; }); }
+    if (document.readyState === 'complete') galWarm(); else window.addEventListener('load', galWarm);
+
+    $('[data-gal-prev]', gal).addEventListener('click', function () { galGo(gIdx - 1); });
+    $('[data-gal-next]', gal).addEventListener('click', function () { galGo(gIdx + 1); });
+    gThumbs.forEach(function (t, n) { t.addEventListener('click', function () { galGo(n); }); });
+    gal.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); galGo(gIdx - 1); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); galGo(gIdx + 1); }
+    });
+
+    /* Pause on hover (mouse only), keyboard focus, hidden tab, or when scrolled away */
+    gal.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') galHold('hover', true); });
+    gal.addEventListener('pointerleave', function () { galHold('hover', false); });
+    gal.addEventListener('focusin', function (e) { if (e.target.matches(':focus-visible')) galHold('focus', true); });
+    gal.addEventListener('focusout', function () { galHold('focus', false); });
+    document.addEventListener('visibilitychange', function () { galHold('hidden', document.hidden); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) { galHold('away', !en[0].isIntersecting); }, { threshold: 0.25 }).observe(gStage);
+    }
+
+    /* Drag / swipe: the slides follow the pointer, then settle on the nearest photo */
+    var dragId = null, dragX0 = 0, dragDx = 0, dragMoved = false, dragT0 = 0;
+    gStage.addEventListener('pointerdown', function (e) {
+      if (e.button > 0 || e.target.closest('.gal-nav')) return;
+      dragId = e.pointerId; dragX0 = e.clientX; dragDx = 0; dragMoved = false; dragT0 = e.timeStamp;
+    });
+    gStage.addEventListener('pointermove', function (e) {
+      if (e.pointerId !== dragId) return;
+      dragDx = e.clientX - dragX0;
+      if (!dragMoved && Math.abs(dragDx) > 6) {
+        dragMoved = true;
+        gTrack.classList.add('is-dragging');
+        galHold('drag', true);
+        try { gStage.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+      }
+      if (dragMoved) galRender(dragDx);
+    });
+    function dragEnd(e) {
+      if (e.pointerId !== dragId) return;
+      dragId = null;
+      if (!dragMoved) return;
+      var w = gStage.clientWidth;
+      var v = dragDx / Math.max(1, e.timeStamp - dragT0);
+      gTrack.classList.remove('is-dragging');
+      galHold('drag', false);
+      if (Math.abs(dragDx) > w * 0.16 || Math.abs(v) > 0.45) galGo(gIdx + (dragDx < 0 ? 1 : -1));
+      else { galRender(0); galSchedule(); }
+    }
+    gStage.addEventListener('pointerup', dragEnd);
+    gStage.addEventListener('pointercancel', dragEnd);
+    /* a drag must not count as a click on the photo (which opens the lightbox) */
+    gStage.addEventListener('click', function (e) {
+      if (dragMoved) { e.stopPropagation(); e.preventDefault(); dragMoved = false; }
+    }, true);
+
+    galRender(0);
+    galUi(false);
+    galSchedule();
   }
+
+  /* ------------------------------ Product card switchers (front / back / facts) ------------------------------ */
+  $$('[data-switcher]').forEach(function (sw) {
+    var main = $('.sw-main', sw);
+    var imgs = $$('[data-sw-img]', sw);
+    var thumbs = $$('[data-sw-thumb]', sw);
+    thumbs.forEach(function (t, n) {
+      t.addEventListener('click', function () {
+        imgs.forEach(function (im, k) { im.classList.toggle('is-on', k === n); });
+        main.dataset.lightbox = imgs[n].getAttribute('src'); main.dataset.alt = imgs[n].alt;
+        thumbs.forEach(function (o) { o.classList.toggle('is-active', o === t); o.setAttribute('aria-pressed', String(o === t)); });
+      });
+    });
+  });
 
   /* ------------------------------ FAQ accordion ------------------------------ */
   $$('.faq-q').forEach(function (btn) {

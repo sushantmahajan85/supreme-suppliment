@@ -17,9 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/img/cutcore-bottle.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/img/product/cutcore-front.webp" type="image/webp">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 
   <script>document.documentElement.classList.add('js');</script>
 
@@ -28,7 +27,7 @@
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Fat loss kit — 30-day program",
-    "description": "A 30-day fat-loss program in one box: CutCore metabolic capsules before breakfast, Appetite Control before meals, and L-Carnitine 3000 fizz in orange and berry blast — plus a diet guide and progress tracker.",
+    "description": "A 30-day fat-loss program in one box: CutCore metabolic capsules before breakfast, Appetite Control before meals, and L-Carnitine 3000 fizz in orange and strawberry — plus a diet guide and progress tracker.",
     "image": "assets/img/kit-hero.webp",
     "brand": { "@type": "Brand", "name": "Supreme Nutrition" },
     "offers": {
@@ -82,7 +81,7 @@
   <main id="main">
     <!-- ============================ HERO ============================ -->
     <section class="bg-stage bg-grid relative overflow-hidden pt-24 sm:pt-28" aria-labelledby="hero-title">
-      <div class="wrap grid items-center gap-6 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:pb-24">
+      <div class="wrap grid items-center gap-6 pb-16 lg:grid-cols-[1fr_1fr] lg:gap-10 lg:pb-24">
         <div class="relative z-10 py-4 lg:py-16">
           <p class="eyebrow">Fat loss kit · 30-day program</p>
           <h1 id="hero-title" class="mt-5 text-[2.6rem] font-extrabold leading-[1.04] sm:text-6xl xl:text-[4.4rem]">
@@ -113,39 +112,42 @@
           <p class="mt-10 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-mute">Made in India · FSSAI-registered facility · Ships across India</p>
         </div>
 
-        <!-- 3D product stage -->
-        <div class="stage" data-stage aria-label="CutCORE Metabolic Capsules bottle">
-          <div class="stage-glow" aria-hidden="true"></div>
-          <div class="stage-ring r2" aria-hidden="true"></div>
-          <div class="stage-ring r1" aria-hidden="true"></div>
-          <div class="stage-floor" aria-hidden="true"></div>
-          <span class="ember" style="left:30%;animation-delay:0s;--dx:-30px" aria-hidden="true"></span>
-          <span class="ember" style="left:48%;animation-delay:2.4s;--dx:25px" aria-hidden="true"></span>
-          <span class="ember" style="left:64%;animation-delay:4.8s;--dx:-18px" aria-hidden="true"></span>
-          <span class="ember" style="left:75%;animation-delay:6.6s;--dx:30px" aria-hidden="true"></span>
-
-          <div class="bottle-slot">
-            <model-viewer
-              class="bottle-model"
-              src="assets/img/sumpreme-nutriition.glb"
-              poster="assets/img/cutcore-bottle.webp"
-              alt="Supreme Nutrition CutCORE Metabolic Capsules — 30 veg capsules bottle"
-              camera-controls
-              auto-rotate
-              rotation-per-second="16deg"
-              camera-orbit="120deg 78deg 118%"
-              max-camera-orbit="auto 180deg 180%"
-              field-of-view="23deg"
-              disable-pan
-              touch-action="pan-y"
-              shadow-intensity="0.85"
-              exposure="1.15"
-              environment-image="neutral"
-              interaction-prompt="auto"
-              loading="eager">
-            </model-viewer>
-            <div class="chip-float -left-4 top-[22%] lg:-left-14" aria-hidden="true"><b>Inside the kit</b>CutCore · 30 veg capsules</div>
-            <div class="chip-float -right-2 bottom-[26%] lg:-right-12" aria-hidden="true"><b>Label</b>Full ingredient disclosure</div>
+        <!-- Product gallery (all 12 pack shots) -->
+        <div class="gallery" data-gallery aria-roledescription="carousel" aria-label="Supreme Nutrition product gallery">
+          <div class="gal-stage" data-gal-stage>
+            <div class="gal-glow" aria-hidden="true"></div>
+            <div class="gal-track" data-gal-track>
+              <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="1 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/cutcore-front.webp" data-alt="CutCore · Front" aria-label="View CutCore · Front larger" tabindex="-1"><img src="assets/img/product/cutcore-front.webp" width="619" height="1150" alt="CutCore · Front" draggable="false" fetchpriority="high" decoding="async"></button></div>
+              <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="2 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/cutcore-back.webp" data-alt="CutCore · Back" aria-label="View CutCore · Back larger" tabindex="-1"><img src="assets/img/product/cutcore-back.webp" width="654" height="1150" alt="CutCore · Back" draggable="false" decoding="async"></button></div>
+              <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="3 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/cutcore-facts.webp" data-alt="CutCore · Nutrition facts" aria-label="View CutCore · Nutrition facts larger" tabindex="-1"><img src="assets/img/product/cutcore-facts.webp" width="662" height="1150" alt="CutCore · Nutrition facts" draggable="false" loading="lazy" decoding="async"></button></div>
+              <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="4 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/appetite-front.webp" data-alt="Appetite Control · Front" aria-label="View Appetite Control · Front larger" tabindex="-1"><img src="assets/img/product/appetite-front.webp" width="610" height="1150" alt="Appetite Control · Front" draggable="false" loading="lazy" decoding="async"></button></div>
+              <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="5 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/appetite-back.webp" data-alt="Appetite Control · Back" aria-label="View Appetite Control · Back larger" tabindex="-1"><img src="assets/img/product/appetite-back.webp" width="627" height="1150" alt="Appetite Control · Back" draggable="false" loading="lazy" decoding="async"></button></div>
+              <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="6 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/appetite-facts.webp" data-alt="Appetite Control · Ingredients" aria-label="View Appetite Control · Ingredients larger" tabindex="-1"><img src="assets/img/product/appetite-facts.webp" width="652" height="1150" alt="Appetite Control · Ingredients" draggable="false" loading="lazy" decoding="async"></button></div>
+              <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="7 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/orange-front.webp" data-alt="L-Carnitine 3000 Orange · Front" aria-label="View L-Carnitine 3000 Orange · Front larger" tabindex="-1"><img src="assets/img/product/orange-front.webp" width="327" height="1150" alt="L-Carnitine 3000 Orange · Front" draggable="false" loading="lazy" decoding="async"></button></div>
+              <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="8 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/orange-back.webp" data-alt="L-Carnitine 3000 Orange · Back" aria-label="View L-Carnitine 3000 Orange · Back larger" tabindex="-1"><img src="assets/img/product/orange-back.webp" width="327" height="1150" alt="L-Carnitine 3000 Orange · Back" draggable="false" loading="lazy" decoding="async"></button></div>
+              <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="9 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/orange-facts.webp" data-alt="L-Carnitine 3000 Orange · Nutrition facts" aria-label="View L-Carnitine 3000 Orange · Nutrition facts larger" tabindex="-1"><img src="assets/img/product/orange-facts.webp" width="327" height="1150" alt="L-Carnitine 3000 Orange · Nutrition facts" draggable="false" loading="lazy" decoding="async"></button></div>
+              <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="10 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/strawberry-front.webp" data-alt="L-Carnitine 3000 Strawberry · Front" aria-label="View L-Carnitine 3000 Strawberry · Front larger" tabindex="-1"><img src="assets/img/product/strawberry-front.webp" width="329" height="1150" alt="L-Carnitine 3000 Strawberry · Front" draggable="false" loading="lazy" decoding="async"></button></div>
+              <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="11 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/strawberry-back.webp" data-alt="L-Carnitine 3000 Strawberry · Back" aria-label="View L-Carnitine 3000 Strawberry · Back larger" tabindex="-1"><img src="assets/img/product/strawberry-back.webp" width="330" height="1150" alt="L-Carnitine 3000 Strawberry · Back" draggable="false" loading="lazy" decoding="async"></button></div>
+              <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="12 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/strawberry-facts.webp" data-alt="L-Carnitine 3000 Strawberry · Nutrition facts" aria-label="View L-Carnitine 3000 Strawberry · Nutrition facts larger" tabindex="-1"><img src="assets/img/product/strawberry-facts.webp" width="328" height="1150" alt="L-Carnitine 3000 Strawberry · Nutrition facts" draggable="false" loading="lazy" decoding="async"></button></div>
+            </div>
+            <button type="button" class="gal-nav gal-prev" data-gal-prev aria-label="Previous photo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+            <button type="button" class="gal-nav gal-next" data-gal-next aria-label="Next photo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+            <p class="gal-cap" aria-live="polite"><span data-gal-cap>CutCore · Front</span><span class="gal-count" data-gal-count>1 / 12</span></p>
+            <span class="gal-progress" aria-hidden="true"><i data-gal-bar></i></span>
+          </div>
+          <div class="gal-thumbs" role="group" aria-label="All product photos">
+            <button type="button" class="gal-thumb is-active" data-gal-thumb="0" aria-label="Show CutCore · Front" aria-pressed="true"><img src="assets/img/product/cutcore-front.webp" width="619" height="1150" loading="lazy" decoding="async" alt=""></button>
+            <button type="button" class="gal-thumb" data-gal-thumb="1" aria-label="Show CutCore · Back" aria-pressed="false"><img src="assets/img/product/cutcore-back.webp" width="654" height="1150" loading="lazy" decoding="async" alt=""></button>
+            <button type="button" class="gal-thumb" data-gal-thumb="2" aria-label="Show CutCore · Nutrition facts" aria-pressed="false"><img src="assets/img/product/cutcore-facts.webp" width="662" height="1150" loading="lazy" decoding="async" alt=""></button>
+            <button type="button" class="gal-thumb" data-gal-thumb="3" aria-label="Show Appetite Control · Front" aria-pressed="false"><img src="assets/img/product/appetite-front.webp" width="610" height="1150" loading="lazy" decoding="async" alt=""></button>
+            <button type="button" class="gal-thumb" data-gal-thumb="4" aria-label="Show Appetite Control · Back" aria-pressed="false"><img src="assets/img/product/appetite-back.webp" width="627" height="1150" loading="lazy" decoding="async" alt=""></button>
+            <button type="button" class="gal-thumb" data-gal-thumb="5" aria-label="Show Appetite Control · Ingredients" aria-pressed="false"><img src="assets/img/product/appetite-facts.webp" width="652" height="1150" loading="lazy" decoding="async" alt=""></button>
+            <button type="button" class="gal-thumb" data-gal-thumb="6" aria-label="Show L-Carnitine 3000 Orange · Front" aria-pressed="false"><img src="assets/img/product/orange-front.webp" width="327" height="1150" loading="lazy" decoding="async" alt=""></button>
+            <button type="button" class="gal-thumb" data-gal-thumb="7" aria-label="Show L-Carnitine 3000 Orange · Back" aria-pressed="false"><img src="assets/img/product/orange-back.webp" width="327" height="1150" loading="lazy" decoding="async" alt=""></button>
+            <button type="button" class="gal-thumb" data-gal-thumb="8" aria-label="Show L-Carnitine 3000 Orange · Nutrition facts" aria-pressed="false"><img src="assets/img/product/orange-facts.webp" width="327" height="1150" loading="lazy" decoding="async" alt=""></button>
+            <button type="button" class="gal-thumb" data-gal-thumb="9" aria-label="Show L-Carnitine 3000 Strawberry · Front" aria-pressed="false"><img src="assets/img/product/strawberry-front.webp" width="329" height="1150" loading="lazy" decoding="async" alt=""></button>
+            <button type="button" class="gal-thumb" data-gal-thumb="10" aria-label="Show L-Carnitine 3000 Strawberry · Back" aria-pressed="false"><img src="assets/img/product/strawberry-back.webp" width="330" height="1150" loading="lazy" decoding="async" alt=""></button>
+            <button type="button" class="gal-thumb" data-gal-thumb="11" aria-label="Show L-Carnitine 3000 Strawberry · Nutrition facts" aria-pressed="false"><img src="assets/img/product/strawberry-facts.webp" width="328" height="1150" loading="lazy" decoding="async" alt=""></button>
           </div>
         </div>
       </div>
@@ -206,7 +208,7 @@
           <div class="flex flex-col justify-center p-7 sm:p-12">
             <span class="chip w-fit">Weight management</span>
             <h3 class="mt-5 text-3xl font-extrabold sm:text-4xl">Fat loss kit — 30-day program</h3>
-            <p class="mt-4 leading-relaxed text-mute">A 30-day fat-loss program in one box: CutCore metabolic capsules before breakfast, Appetite Control before meals, and L-Carnitine 3000 fizz in orange and berry blast — plus a diet guide and progress tracker. Every ingredient, printed in full.</p>
+            <p class="mt-4 leading-relaxed text-mute">A 30-day fat-loss program in one box: CutCore metabolic capsules before breakfast, Appetite Control before meals, and L-Carnitine 3000 fizz in orange and strawberry — plus a diet guide and progress tracker. Every ingredient, printed in full.</p>
 
             <ul class="mt-7 space-y-3.5 text-[0.95rem] text-silver">
               <li class="flex gap-3"><svg class="mt-1 h-4 w-4 shrink-0 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Full-label disclosure — every ingredient and quantity printed per capsule</li>
@@ -241,10 +243,14 @@
         <div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           <!-- CutCore -->
           <article class="reveal card card-hover flex flex-col">
-            <button type="button" class="group relative block aspect-[4/5] overflow-hidden bg-black" data-lightbox="assets/img/cutcore-bottle.webp" data-alt="CutCore Metabolic capsules label" aria-label="View CutCore label larger">
-              <span class="absolute inset-0 bg-[radial-gradient(closest-side,rgba(242,13,24,.28),transparent_75%)]" aria-hidden="true"></span>
-              <img src="assets/img/cutcore-bottle.webp" width="763" height="1468" loading="lazy" decoding="async" alt="CutCore Metabolic capsules label" class="relative mx-auto h-full w-auto object-contain py-5 transition duration-500 group-hover:scale-105">
-            </button>
+            <div class="switcher" data-switcher>
+              <button type="button" class="sw-main" data-lightbox="assets/img/product/cutcore-front.webp" data-alt="CutCore Metabolic capsules — Front" aria-label="View CutCore Metabolic capsules larger">
+                <span class="sw-glow" aria-hidden="true"></span>
+                <img src="assets/img/product/cutcore-front.webp" width="619" height="1150" loading="lazy" decoding="async" alt="CutCore Metabolic capsules — Front" class="is-on" data-sw-img><img src="assets/img/product/cutcore-back.webp" width="654" height="1150" loading="lazy" decoding="async" alt="CutCore Metabolic capsules — Back" class="" data-sw-img><img src="assets/img/product/cutcore-facts.webp" width="662" height="1150" loading="lazy" decoding="async" alt="CutCore Metabolic capsules — Facts" class="" data-sw-img>
+                <span class="sw-zoom" aria-hidden="true">Tap to enlarge</span>
+              </button>
+              <div class="sw-thumbs"><button type="button" class="sw-thumb is-active" data-sw-thumb="0" aria-label="CutCore Metabolic capsules: Front" aria-pressed="true"><img src="assets/img/product/cutcore-front.webp" width="619" height="1150" loading="lazy" decoding="async" alt=""><span>Front</span></button><button type="button" class="sw-thumb" data-sw-thumb="1" aria-label="CutCore Metabolic capsules: Back" aria-pressed="false"><img src="assets/img/product/cutcore-back.webp" width="654" height="1150" loading="lazy" decoding="async" alt=""><span>Back</span></button><button type="button" class="sw-thumb" data-sw-thumb="2" aria-label="CutCore Metabolic capsules: Facts" aria-pressed="false"><img src="assets/img/product/cutcore-facts.webp" width="662" height="1150" loading="lazy" decoding="async" alt=""><span>Facts</span></button></div>
+            </div>
             <div class="flex flex-1 flex-col p-6">
               <p class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-brand">Morning · Metabolism</p>
               <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-mute">30 veg capsules</p>
@@ -255,10 +261,14 @@
           </article>
           <!-- Appetite Control -->
           <article class="reveal card card-hover flex flex-col" style="--d:80ms">
-            <button type="button" class="group relative block aspect-[4/5] overflow-hidden bg-[#06140a]" data-lightbox="assets/img/label-appetite-control.webp" data-alt="Appetite Control Satiety capsules full label with ingredients" aria-label="View Appetite Control label larger">
-              <img src="assets/img/label-appetite-control.webp" width="1193" height="547" loading="lazy" decoding="async" alt="Appetite Control Satiety capsules label" class="h-full w-full object-cover object-[50%_50%] transition duration-500 group-hover:scale-105">
-              <span class="absolute bottom-3 right-3 rounded-full bg-black/70 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-wider text-white backdrop-blur">View full label</span>
-            </button>
+            <div class="switcher" data-switcher>
+              <button type="button" class="sw-main" data-lightbox="assets/img/product/appetite-front.webp" data-alt="Appetite Control Satiety capsules — Front" aria-label="View Appetite Control Satiety capsules larger">
+                <span class="sw-glow" aria-hidden="true"></span>
+                <img src="assets/img/product/appetite-front.webp" width="610" height="1150" loading="lazy" decoding="async" alt="Appetite Control Satiety capsules — Front" class="is-on" data-sw-img><img src="assets/img/product/appetite-back.webp" width="627" height="1150" loading="lazy" decoding="async" alt="Appetite Control Satiety capsules — Back" class="" data-sw-img><img src="assets/img/product/appetite-facts.webp" width="652" height="1150" loading="lazy" decoding="async" alt="Appetite Control Satiety capsules — Ingredients" class="" data-sw-img>
+                <span class="sw-zoom" aria-hidden="true">Tap to enlarge</span>
+              </button>
+              <div class="sw-thumbs"><button type="button" class="sw-thumb is-active" data-sw-thumb="0" aria-label="Appetite Control Satiety capsules: Front" aria-pressed="true"><img src="assets/img/product/appetite-front.webp" width="610" height="1150" loading="lazy" decoding="async" alt=""><span>Front</span></button><button type="button" class="sw-thumb" data-sw-thumb="1" aria-label="Appetite Control Satiety capsules: Back" aria-pressed="false"><img src="assets/img/product/appetite-back.webp" width="627" height="1150" loading="lazy" decoding="async" alt=""><span>Back</span></button><button type="button" class="sw-thumb" data-sw-thumb="2" aria-label="Appetite Control Satiety capsules: Ingredients" aria-pressed="false"><img src="assets/img/product/appetite-facts.webp" width="652" height="1150" loading="lazy" decoding="async" alt=""><span>Ingredients</span></button></div>
+            </div>
             <div class="flex flex-1 flex-col p-6">
               <p class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-brand">Before meals · Satiety</p>
               <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-mute">30 veg capsules</p>
@@ -269,9 +279,14 @@
           </article>
           <!-- L-Carnitine Orange -->
           <article class="reveal card card-hover flex flex-col" style="--d:160ms">
-            <button type="button" class="group relative block aspect-[4/5] overflow-hidden bg-black" data-lightbox="assets/img/label-lcarnitine-orange.webp" data-alt="L-Carnitine 3000 Orange effervescent label" aria-label="View L-Carnitine Orange label larger">
-              <img src="assets/img/label-lcarnitine-orange.webp" width="580" height="766" loading="lazy" decoding="async" alt="L-Carnitine 3000 Orange effervescent label" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
-            </button>
+            <div class="switcher" data-switcher>
+              <button type="button" class="sw-main" data-lightbox="assets/img/product/orange-front.webp" data-alt="L-Carnitine 3000 Orange effervescent — Front" aria-label="View L-Carnitine 3000 Orange effervescent larger">
+                <span class="sw-glow" aria-hidden="true"></span>
+                <img src="assets/img/product/orange-front.webp" width="327" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Orange effervescent — Front" class="is-on" data-sw-img><img src="assets/img/product/orange-back.webp" width="327" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Orange effervescent — Back" class="" data-sw-img><img src="assets/img/product/orange-facts.webp" width="327" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Orange effervescent — Facts" class="" data-sw-img>
+                <span class="sw-zoom" aria-hidden="true">Tap to enlarge</span>
+              </button>
+              <div class="sw-thumbs"><button type="button" class="sw-thumb is-active" data-sw-thumb="0" aria-label="L-Carnitine 3000 Orange effervescent: Front" aria-pressed="true"><img src="assets/img/product/orange-front.webp" width="327" height="1150" loading="lazy" decoding="async" alt=""><span>Front</span></button><button type="button" class="sw-thumb" data-sw-thumb="1" aria-label="L-Carnitine 3000 Orange effervescent: Back" aria-pressed="false"><img src="assets/img/product/orange-back.webp" width="327" height="1150" loading="lazy" decoding="async" alt=""><span>Back</span></button><button type="button" class="sw-thumb" data-sw-thumb="2" aria-label="L-Carnitine 3000 Orange effervescent: Facts" aria-pressed="false"><img src="assets/img/product/orange-facts.webp" width="327" height="1150" loading="lazy" decoding="async" alt=""><span>Facts</span></button></div>
+            </div>
             <div class="flex flex-1 flex-col p-6">
               <p class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-brand">Daily · Energy</p>
               <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-mute">15 effervescent tablets</p>
@@ -282,19 +297,24 @@
           </article>
           <!-- L-Carnitine Berry -->
           <article class="reveal card card-hover flex flex-col" style="--d:240ms">
-            <button type="button" class="group relative block aspect-[4/5] overflow-hidden bg-black" data-lightbox="assets/img/label-lcarnitine-berry.webp" data-alt="L-Carnitine 3000 Berry blast effervescent label" aria-label="View L-Carnitine Berry blast label larger">
-              <img src="assets/img/label-lcarnitine-berry.webp" width="568" height="767" loading="lazy" decoding="async" alt="L-Carnitine 3000 Berry blast effervescent label" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
-            </button>
+            <div class="switcher" data-switcher>
+              <button type="button" class="sw-main" data-lightbox="assets/img/product/strawberry-front.webp" data-alt="L-Carnitine 3000 Strawberry effervescent — Front" aria-label="View L-Carnitine 3000 Strawberry effervescent larger">
+                <span class="sw-glow" aria-hidden="true"></span>
+                <img src="assets/img/product/strawberry-front.webp" width="329" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Strawberry effervescent — Front" class="is-on" data-sw-img><img src="assets/img/product/strawberry-back.webp" width="330" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Strawberry effervescent — Back" class="" data-sw-img><img src="assets/img/product/strawberry-facts.webp" width="328" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Strawberry effervescent — Facts" class="" data-sw-img>
+                <span class="sw-zoom" aria-hidden="true">Tap to enlarge</span>
+              </button>
+              <div class="sw-thumbs"><button type="button" class="sw-thumb is-active" data-sw-thumb="0" aria-label="L-Carnitine 3000 Strawberry effervescent: Front" aria-pressed="true"><img src="assets/img/product/strawberry-front.webp" width="329" height="1150" loading="lazy" decoding="async" alt=""><span>Front</span></button><button type="button" class="sw-thumb" data-sw-thumb="1" aria-label="L-Carnitine 3000 Strawberry effervescent: Back" aria-pressed="false"><img src="assets/img/product/strawberry-back.webp" width="330" height="1150" loading="lazy" decoding="async" alt=""><span>Back</span></button><button type="button" class="sw-thumb" data-sw-thumb="2" aria-label="L-Carnitine 3000 Strawberry effervescent: Facts" aria-pressed="false"><img src="assets/img/product/strawberry-facts.webp" width="328" height="1150" loading="lazy" decoding="async" alt=""><span>Facts</span></button></div>
+            </div>
             <div class="flex flex-1 flex-col p-6">
               <p class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-brand">Daily · Energy</p>
               <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-mute">15 effervescent tablets</p>
-              <h3 class="mt-3 text-xl font-bold">L-Carnitine 3000 <span class="font-medium text-silver/80">Berry blast effervescent</span></h3>
-              <p class="mt-3 flex-1 text-sm leading-relaxed text-mute">The same L-Carnitine 3000 mg formula with Vitamin B6 &amp; B12, in a refreshing strawberry-berry fizz. Fast dissolving and sugar free.</p>
+              <h3 class="mt-3 text-xl font-bold">L-Carnitine 3000 <span class="font-medium text-silver/80">Strawberry effervescent</span></h3>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-mute">The same L-Carnitine 3000 mg formula with Vitamin B6 &amp; B12, in a refreshing strawberry fizz. Fast dissolving and sugar free.</p>
               <p class="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-xs font-semibold uppercase tracking-wider text-silver">Drop 1 tablet in 200–250 ml cold water, once daily</p>
             </div>
           </article>
         </div>
-        <p class="mt-6 text-sm text-mute">Tap any label to read the full ingredient panel printed on the pack.</p>
+        <p class="mt-6 text-sm text-mute">Tap a thumbnail to flip between front, back and nutrition panel — tap the photo to enlarge.</p>
       </div>
     </section>
 
@@ -394,7 +414,7 @@
           <div class="faq-item"><h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-3" id="faq-b3">Do you hide ingredients in proprietary blends?<span class="faq-icon" aria-hidden="true"></span></button></h3>
             <div class="faq-a" id="faq-3" role="region" aria-labelledby="faq-b3"><div><p class="pb-6 pr-10 text-mute">Never. Every ingredient and its exact quantity per capsule or tablet is printed on the label. What you read on the site is what you read on the pack.</p></div></div></div>
           <div class="faq-item"><h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-4" id="faq-b4">How do I use the four products?<span class="faq-icon" aria-hidden="true"></span></button></h3>
-            <div class="faq-a" id="faq-4" role="region" aria-labelledby="faq-b4"><div><p class="pb-6 pr-10 text-mute">CutCore: 1 capsule 30 minutes before breakfast. Appetite Control: 1 capsule 30 minutes before meals. L-Carnitine 3000 (orange or berry blast): drop 1 effervescent tablet into 200–250 ml cold water, let it fizz, and drink — once daily. The box includes a 30-day diet guide and progress tracker to keep you on schedule.</p></div></div></div>
+            <div class="faq-a" id="faq-4" role="region" aria-labelledby="faq-b4"><div><p class="pb-6 pr-10 text-mute">CutCore: 1 capsule 30 minutes before breakfast. Appetite Control: 1 capsule 30 minutes before meals. L-Carnitine 3000 (orange or strawberry): drop 1 effervescent tablet into 200–250 ml cold water, let it fizz, and drink — once daily. The box includes a 30-day diet guide and progress tracker to keep you on schedule.</p></div></div></div>
           <div class="faq-item"><h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-5" id="faq-b5">Who should not take this kit?<span class="faq-icon" aria-hidden="true"></span></button></h3>
             <div class="faq-a" id="faq-5" role="region" aria-labelledby="faq-b5"><div><p class="pb-6 pr-10 text-mute">It is not recommended for pregnant or lactating women, children, or individuals with medical conditions. If you are taking any medication, consult your healthcare professional before use.</p></div></div></div>
           <div class="faq-item"><h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-6" id="faq-b6">How soon will I see results?<span class="faq-icon" aria-hidden="true"></span></button></h3>
@@ -485,7 +505,7 @@
           <aside class="reveal card p-6 sm:p-9 lg:sticky lg:top-24" style="--d:120ms" aria-label="Order summary">
             <img src="assets/img/kit-hero.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Fat loss kit — 30-day program, open box with four products" class="aspect-[3/2] w-full rounded-2xl border border-white/10 object-cover">
             <h3 class="mt-6 text-xl font-bold">Fat loss kit — 30-day program</h3>
-            <p class="mt-1 text-sm text-mute">CutCore · Appetite Control · L-Carnitine 3000 (orange &amp; berry blast) · diet guide &amp; progress tracker</p>
+            <p class="mt-1 text-sm text-mute">CutCore · Appetite Control · L-Carnitine 3000 (orange &amp; strawberry) · diet guide &amp; progress tracker</p>
             <dl class="mt-6 space-y-3 border-t border-white/10 pt-6 text-sm">
               <div class="flex justify-between"><dt class="text-mute">Price per kit</dt><dd class="font-medium text-white">₹3,499</dd></div>
               <div class="flex justify-between"><dt class="text-mute">MRP</dt><dd class="text-mute line-through">₹3,999</dd></div>
