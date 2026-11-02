@@ -3,9 +3,8 @@
  * Nothing secret goes in this file. NEVER paste a Razorpay *secret* key anywhere in the frontend.
  */
 window.SITE_CONFIG = {
-  // Business WhatsApp number in international format, digits only (e.g. "919876543210").
-  // No number was published on the original site, so this is empty.
-  whatsappNumber: '',
+  // Business WhatsApp number in international format, digits only (country code + number).
+  whatsappNumber: '917082506088',
 
   contactEmail: 'supremenutrition17@gmail.com',
 
