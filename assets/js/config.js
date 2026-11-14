@@ -26,7 +26,7 @@ window.SITE_CONFIG = {
    */
   razorpayPaymentLinks: {},
   // Razorpay Webstore (Payment Page) — public URL, not a secret.
-  razorpayPaymentPage: 'https://rzp.io/rzp/sxHAWNE',
+  razorpayPaymentPage: 'https://rzp.io/rzp/lanSCk5',
 
   /*
    * PAYMENTS — API mode (optional). Only if you host optional-backend/ somewhere (Render, Railway, ...).
