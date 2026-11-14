@@ -25,7 +25,8 @@ window.SITE_CONFIG = {
    * The amount is fixed on Razorpay's side, so it cannot be tampered with from the browser.
    */
   razorpayPaymentLinks: {},
-  razorpayPaymentPage: '',
+  // Razorpay Webstore (Payment Page) — public URL, not a secret.
+  razorpayPaymentPage: 'https://rzp.io/rzp/sxHAWNE',
 
   /*
    * PAYMENTS — API mode (optional). Only if you host optional-backend/ somewhere (Render, Railway, ...).

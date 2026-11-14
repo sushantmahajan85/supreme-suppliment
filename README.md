@@ -48,7 +48,7 @@ Never put the Razorpay **secret** key in this repo.
 - The live site sells the **Fat loss kit** (₹3,499, MRP ₹3,999); CutCORE is one of its four products. The hero features the CutCORE bottle; the purchase is the kit at its real price.
 - Reused: all copy, 6 FAQ answers, footer/manufacturer details, AYUSH licence, kit + label images (full ingredient panels open in a lightbox).
 - Dropped: three "Sample review — real customer stories coming soon" testimonials (not genuine) and the "DEMO CART" (replaced by real checkout).
-- Returns / privacy / terms are still "pending final copy" as on the original; GSTIN, registered address and return window must come from the business.
+- Privacy (`privacy.html`), refund/return (`refund-policy.html`), shipping (`shipping-policy.html`) and terms of use (`terms.html`) are published. The refund terms (cancel before dispatch, 48-hour damage claims, 10-day sealed returns, 5–7 business-day refunds), the shipping terms (dispatch within 48 hours, no Sunday dispatch, re-shipping charge after a failed delivery) and the Panipat jurisdiction must be confirmed by the business. GSTIN and a named grievance officer are still pending.
 - Missing on the original and therefore not invented: WhatsApp number, social links, canonical URL, absolute `og:image` (set these after you know the live URL).
 - `assets/img/source/` holds the untouched original images (public on Pages; delete if you prefer).
 

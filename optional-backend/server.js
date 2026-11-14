@@ -242,7 +242,7 @@ const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=u
 function serveStatic(req, res, pathname) {
   let rel = decodeURIComponent(pathname);
   if (rel === '/') rel = '/index.html';
-  const allowed = rel === '/index.html' || (rel.startsWith('/assets/') && !rel.includes('/source/'));
+  const allowed = rel === '/index.html' || rel === '/privacy.html' || rel === '/refund-policy.html' || rel === '/shipping-policy.html' || rel === '/terms.html' || (rel.startsWith('/assets/') && !rel.includes('/source/'));
   const file = path.normalize(path.join(ROOT, rel));
   if (!allowed || !file.startsWith(ROOT + path.sep) || !fs.existsSync(file) || !fs.statSync(file).isFile()) {
     res.writeHead(404, { 'Content-Type': 'text/plain' }); return res.end('Not found');

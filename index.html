@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Supreme Nutrition — Fat Loss Kit · 30-Day Program</title>
   <meta name="description" content="A 30-day fat-loss program in one box: CutCore metabolic capsules, Appetite Control capsules and L-Carnitine 3000 fizz in two flavours — every ingredient and quantity printed in full.">
-  <meta name="theme-color" content="#050505">
+  <meta name="theme-color" content="#F6F5F2">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Supreme Nutrition">
   <meta property="og:title" content="Supreme Nutrition — Fat Loss Kit · 30-Day Program">
@@ -16,9 +16,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,600..900;1,62..125,600..900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/product/cutcore-front.webp" type="image/webp">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preload" as="image" href="assets/img/product/appetite-front.webp" type="image/webp">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
 
   <script>document.documentElement.classList.add('js');</script>
 
@@ -40,84 +41,351 @@
   </script>
 </head>
 <body>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" class="absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.53a2 2 0 0 1-.21.9L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.07-10.12a2 2 0 0 1-.21-.9V2M8.5 2h7M7 16h10"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73zM12 22V12"/><path d="m3.3 7 7.7 4.73a2 2 0 0 0 2 0L20.7 7M7.5 4.27l9 5.15"/></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="M6.5 6.5 17.5 17.5M21 21l-1-1M3 3l1 1M18 22l4-4M2 6l4-4M3 10l7-7M14 21l7-7"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4ZM3 6h18M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.07-17.07 1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-plate" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M16 13H8M16 17H8M10 9H8"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><path d="m15.48 12.89 1.51 8.53a.5.5 0 0 1-.81.47l-3.58-2.69a1 1 0 0 0-1.2 0l-3.59 2.69a.5.5 0 0 1-.81-.47l1.52-8.53"/><circle cx="12" cy="8" r="6"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path stroke="none" fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.2-.25-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.37l-.36-.22-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41Z"/></symbol>
+  </svg>
+
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-black">Skip to content</a>
 
+  <!-- ============================ ANNOUNCEMENT (red) ============================ -->
+  <div class="topbar tone-dark relative overflow-hidden bg-char py-2.5 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white" aria-label="Store highlights">
+    <div class="ticker flex items-center gap-10 whitespace-nowrap">
+      <span class="flex items-center gap-2"><svg class="ico !h-4 !w-4 text-[#ff5a61]"><use href="#i-truck"/></svg>Free shipping across India</span><span class="text-brand" aria-hidden="true">✦</span>
+      <span>Launch offer — save ₹500</span><span class="text-brand" aria-hidden="true">✦</span>
+      <span class="flex items-center gap-2"><svg class="ico !h-4 !w-4 text-[#ff5a61]"><use href="#i-shield"/></svg>FSSAI-registered facility</span><span class="text-brand" aria-hidden="true">✦</span>
+      <span>No proprietary blends</span><span class="text-brand" aria-hidden="true">✦</span>
+      <span class="flex items-center gap-2"><svg class="ico !h-4 !w-4 text-[#ff5a61]"><use href="#i-award"/></svg>GMP &amp; ISO certified</span><span class="text-brand" aria-hidden="true">✦</span>
+      <span>Dispatch within 48 hours</span><span class="text-brand" aria-hidden="true">✦</span>
+      <span aria-hidden="true" class="flex items-center gap-2"><svg class="ico !h-4 !w-4 text-[#ff5a61]"><use href="#i-truck"/></svg>Free shipping across India</span><span class="text-brand" aria-hidden="true">✦</span>
+      <span aria-hidden="true">Launch offer — save ₹500</span><span class="text-brand" aria-hidden="true">✦</span>
+      <span aria-hidden="true" class="flex items-center gap-2"><svg class="ico !h-4 !w-4 text-[#ff5a61]"><use href="#i-shield"/></svg>FSSAI-registered facility</span><span class="text-brand" aria-hidden="true">✦</span>
+      <span aria-hidden="true">No proprietary blends</span><span class="text-brand" aria-hidden="true">✦</span>
+      <span aria-hidden="true" class="flex items-center gap-2"><svg class="ico !h-4 !w-4 text-[#ff5a61]"><use href="#i-award"/></svg>GMP &amp; ISO certified</span><span class="text-brand" aria-hidden="true">✦</span>
+      <span aria-hidden="true">Dispatch within 48 hours</span><span class="text-brand" aria-hidden="true">✦</span>
+    </div>
+  </div>
+
   <!-- ============================ HEADER ============================ -->
-  <header id="top" class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/70 backdrop-blur-xl transition-colors" data-header>
-    <div class="wrap flex h-16 items-center justify-between gap-6">
-      <a href="#top" class="flex items-center gap-3" aria-label="Supreme Nutrition — home">
-        <img src="assets/img/logo.webp" width="40" height="40" alt="Supreme Nutrition logo" class="h-10 w-10 rounded-full">
-        <span class="text-[0.95rem] font-bold leading-none tracking-wide text-white">SUPREME <span class="font-medium text-brand">NUTRITION</span></span>
+  <header id="top" class="site-header sticky top-0 z-50 border-b border-line bg-white/80 backdrop-blur-xl" data-header>
+    <div class="wrap hdr-row flex h-[4.5rem] items-center justify-between gap-6">
+      <a href="#top" class="group flex items-center gap-3" aria-label="Supreme Nutrition — home">
+        <img src="assets/img/logo.webp" width="44" height="44" alt="" class="h-11 w-11 rounded-full transition duration-500 group-hover:rotate-[-12deg]">
+        <span class="display text-[1.15rem] !not-italic leading-none text-fg">SUPREME<span class="block text-[0.62rem] font-bold tracking-[0.42em] text-brand">NUTRITION</span></span>
       </a>
 
-      <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
-        <a class="nav-link" href="#shop">Shop</a>
-        <a class="nav-link" href="#inside">Inside the kit</a>
-        <a class="nav-link" href="#why">Why us</a>
-        <a class="nav-link" href="#how">How it works</a>
-        <a class="nav-link" href="#transparency">Transparency</a>
-        <a class="nav-link" href="#faq">FAQ</a>
+      <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary">
+        <a class="nav-link" href="#shop" data-spy>Shop</a>
+        <a class="nav-link" href="#inside" data-spy>Inside the Kit</a>
+        <a class="nav-link" href="#how" data-spy>How It Works</a>
+        <a class="nav-link" href="#why" data-spy>Why Supreme</a>
+        <a class="nav-link" href="#transparency" data-spy>Transparency</a>
+        <a class="nav-link" href="#faq" data-spy>FAQ</a>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <a href="#order" class="btn btn-primary !min-h-[2.6rem] !px-5 !text-sm">Buy Now</a>
-        <button type="button" class="grid h-11 w-11 place-items-center rounded-full border border-white/15 lg:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-btn>
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="#order" class="relative grid h-11 w-11 place-items-center rounded-full text-fg transition hover:bg-black/5" aria-label="Go to checkout">
+          <svg class="ico !h-[1.35rem] !w-[1.35rem]"><use href="#i-bag"/></svg>
+          <span class="cart-badge absolute right-0.5 top-0.5 grid h-[1.15rem] min-w-[1.15rem] place-items-center rounded-full bg-brand px-1 text-[0.62rem] font-bold text-white" data-cart-count>1</span>
+        </a>
+        <a href="#order" class="btn btn-primary btn-sm hidden sm:inline-flex" data-magnet>Buy Now <svg class="ico arr !h-4 !w-4"><use href="#i-arrow"/></svg></a>
+        <button type="button" class="grid h-11 w-11 place-items-center rounded-full border border-line lg:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-btn>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path data-menu-icon d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </div>
-    <div id="mobile-menu" class="menu-panel border-t border-white/10 bg-ink/95 lg:hidden" data-menu hidden>
+    <span class="scroll-progress" aria-hidden="true" data-scroll-progress></span>
+    <div id="mobile-menu" class="menu-panel border-t border-line bg-white/95 lg:hidden" data-menu hidden>
       <nav class="wrap flex flex-col py-3" aria-label="Mobile">
-        <a class="border-b border-white/5 py-3.5 font-medium text-white" href="#shop">Shop</a>
-        <a class="border-b border-white/5 py-3.5 font-medium text-white" href="#inside">Inside the kit</a>
-        <a class="border-b border-white/5 py-3.5 font-medium text-white" href="#why">Why us</a>
-        <a class="border-b border-white/5 py-3.5 font-medium text-white" href="#how">How it works</a>
-        <a class="border-b border-white/5 py-3.5 font-medium text-white" href="#transparency">Transparency</a>
-        <a class="py-3.5 font-medium text-white" href="#faq">FAQ</a>
+        <a class="border-b border-line py-3.5 font-medium text-fg" href="#shop">Shop</a>
+        <a class="border-b border-line py-3.5 font-medium text-fg" href="#inside">Inside the Kit</a>
+        <a class="border-b border-line py-3.5 font-medium text-fg" href="#how">How It Works</a>
+        <a class="border-b border-line py-3.5 font-medium text-fg" href="#why">Why Supreme</a>
+        <a class="border-b border-line py-3.5 font-medium text-fg" href="#transparency">Transparency</a>
+        <a class="border-b border-line py-3.5 font-medium text-fg" href="#faq">FAQ</a>
+        <a class="btn btn-primary mt-4" href="#order">Buy Now — ₹3,499</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- ============================ HERO ============================ -->
-    <section class="bg-stage bg-grid relative overflow-hidden pt-24 sm:pt-28" aria-labelledby="hero-title">
-      <div class="wrap grid items-center gap-6 pb-16 lg:grid-cols-[1fr_1fr] lg:gap-10 lg:pb-24">
-        <div class="relative z-10 py-4 lg:py-16">
-          <p class="eyebrow">Fat loss kit · 30-day program</p>
-          <h1 id="hero-title" class="mt-5 text-[2.6rem] font-extrabold leading-[1.04] sm:text-6xl xl:text-[4.4rem]">
-            Wellness that starts with <span class="text-brand">what’s inside.</span>
+    <!-- ============================ HERO (semi-light + charcoal stage) ============================ -->
+    <section class="hero hero-bg hero-grid grain relative overflow-hidden" aria-labelledby="hero-title" data-parallax>
+      <span class="slash bottom-[10%] left-[-6%] h-2.5 w-[20%]" style="transition-delay:.2s" aria-hidden="true"></span>
+      <span class="slash bottom-[7.5%] left-[-4%] h-1 w-[12%]" style="transition-delay:.35s" aria-hidden="true"></span>
+
+      <div class="wrap relative grid items-center gap-10 pb-24 pt-10 sm:pt-14 lg:grid-cols-[1fr_1.02fr] lg:gap-12 lg:pb-32 lg:pt-14">
+        <div class="relative z-10">
+          <p class="eyebrow fade-up" style="--d:100ms">Fat loss kit · <span class="text-brand">30-day program</span></p>
+          <h1 id="hero-title" class="display mt-5 [font-stretch:92%] text-[2.55rem] sm:text-[3.7rem] lg:text-[3.45rem] xl:text-[4.25rem]">
+            <span class="ln"><span class="text-steel" style="--d:150ms">Wellness that</span></span>
+            <span class="ln"><span class="text-steel" style="--d:260ms">starts with</span></span>
+            <span class="ln"><span class="text-redfire" style="--d:370ms">what’s inside.</span></span>
           </h1>
-          <p class="mt-6 max-w-xl text-base leading-relaxed text-mute sm:text-lg">
-            CutCore before breakfast, Appetite Control before meals, and L-Carnitine 3000 fizz in two flavours — with every ingredient and quantity printed on the pack.
-          </p>
+          <svg class="swoosh -mt-1 h-5 w-64 text-brand sm:w-80" viewBox="0 0 320 20" fill="none" aria-hidden="true"><path d="M4 15C80 5 190 2 316 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
 
-          <div class="mt-8 flex flex-wrap items-end gap-x-5 gap-y-2">
-            <p class="text-5xl font-extrabold tracking-tight text-white sm:text-6xl" aria-label="Price 3,499 rupees">₹3,499</p>
-            <p class="pb-1.5 text-xl text-mute line-through" aria-label="MRP 3,999 rupees">₹3,999</p>
-            <span class="mb-2 rounded-full bg-brand px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Save ₹500</span>
+          <p class="fade-up mt-5 max-w-md text-base leading-relaxed text-fg2 sm:text-lg" style="--d:500ms">4 products. 30 days. Every ingredient printed on the pack.</p>
+
+          <div class="fade-up mt-8 flex flex-wrap items-center gap-x-5 gap-y-3" style="--d:650ms">
+            <p class="display text-5xl text-fg sm:text-6xl" aria-label="Price 3,499 rupees">₹3,499</p>
+            <p class="text-xl text-fg2 line-through" aria-label="MRP 3,999 rupees">₹3,999</p>
+            <span class="save-tag bg-brand px-3 py-1 text-sm font-extrabold uppercase tracking-wider text-white"><span>Save ₹500</span></span>
           </div>
-          <p class="mt-2 text-sm text-mute">Launch offer · MRP ₹3,999 · inclusive of all taxes · Free shipping across India</p>
+          <p class="fade-up mt-2 text-[0.8rem] text-fg2" style="--d:700ms">Free shipping across India · Inclusive of all taxes</p>
 
-          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-            <a href="#order" class="btn btn-primary sm:min-w-[11rem]" data-buy>Buy Now
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
-            <button type="button" class="btn btn-wa" data-wa>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.2 1.6 6L0 24l6.3-1.7a11.9 11.9 0 0 0 5.7 1.5C18.6 23.8 24 18.5 24 11.9c0-3.2-1.2-6.200-3.500-8.400zM12 21.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.700 1 1-3.600-.2-.4a9.800 9.800 0 0 1-1.500-5.200C2.200 6.500 6.600 2.100 12 2.100c2.600 0 5.100 1 6.900 2.900a9.700 9.700 0 0 1 2.900 6.900c0 5.400-4.400 9.900-9.800 9.900zm5.400-7.400c-.3-.1-1.700-.9-2-1s-.5-.1-.7.100-.8 1-.9 1.100-.3.200-.6.100a8 8 0 0 1-2.400-1.500 9 9 0 0 1-1.600-2c-.2-.3 0-.5.100-.6l.4-.5.300-.5c.1-.2 0-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3 2 3.100 4.900 4.300c.7.300 1.200.5 1.600.6.700.2 1.300.2 1.800.1.500-.1 1.700-.7 1.900-1.400.2-.7.200-1.200.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>
-              Order on WhatsApp
-            </button>
+          <div class="fade-up mt-8 flex flex-col gap-3 sm:flex-row" style="--d:800ms">
+            <a href="#order" class="btn btn-primary sm:min-w-[12rem]" data-buy data-magnet>Buy Now <svg class="ico arr !h-4 !w-4"><use href="#i-arrow"/></svg></a>
+            <button type="button" class="btn btn-outline bg-white/60" data-wa data-magnet><svg class="ico !h-5 !w-5 text-[#1faa53]"><use href="#i-wa"/></svg>Order on WhatsApp</button>
           </div>
-          <p class="mt-4 hidden text-sm text-[#ff9aa0]" role="status" data-wa-msg></p>
-
-          <p class="mt-10 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-mute">Made in India · FSSAI-registered facility · Ships across India</p>
+          <p class="mt-4 hidden text-sm text-brand2" role="status" data-wa-msg></p>
         </div>
 
+        <!-- Product stage: charcoal card, athlete behind the products -->
+        <div class="fade-up relative z-[1]" style="--d:200ms" aria-label="The four products in the kit">
+          <div class="stage-card">
+            <div class="stage" data-stage>
+              <span class="halo" aria-hidden="true"></span>
+              <img class="athlete" src="assets/img/athlete-bg.webp" width="548" height="1404" alt="" aria-hidden="true" draggable="false" decoding="async">
+              <span class="ring" aria-hidden="true"></span>
+              <canvas class="ember-canvas" data-embers aria-hidden="true"></canvas>
+
+              <svg class="podium" viewBox="0 0 600 200" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="pd-top" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6a6c73"/><stop offset="1" stop-color="#34363c"/></linearGradient>
+                  <linearGradient id="pd-face" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3c42"/><stop offset="1" stop-color="#1d1e22"/></linearGradient>
+                  <radialGradient id="pd-glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f20d18" stop-opacity=".45"/><stop offset="1" stop-color="#f20d18" stop-opacity="0"/></radialGradient>
+                  <filter id="pd-blur"><feGaussianBlur stdDeviation="3"/></filter>
+                </defs>
+                <ellipse cx="300" cy="178" rx="300" ry="24" fill="url(#pd-glow)"/>
+                <path d="M40 70 Q300 128 560 70 L548 160 Q300 205 52 160 Z" fill="url(#pd-face)"/>
+                <ellipse cx="300" cy="70" rx="260" ry="44" fill="url(#pd-top)"/>
+                <ellipse cx="300" cy="70" rx="260" ry="44" fill="none" stroke="#ff4a52" stroke-width="2" opacity=".7" filter="url(#pd-blur)"/>
+                <ellipse cx="300" cy="70" rx="260" ry="44" fill="none" stroke="#ff8a90" stroke-width="1"/>
+                <g fill="none" stroke="#ff4a52" stroke-width="1.6" stroke-linecap="round" opacity=".75">
+                  <path class="lava" d="M90 120 L140 132 L170 150 M210 140 L260 128 L300 152 L330 140 M380 150 L420 128 L470 138 L510 122"/>
+                </g>
+              </svg>
+
+              <div class="p" style="--l:5%;--h:62%;--b:25%;--d:14;--z:2;--rd:700ms;--fd:-1.2s"><img src="assets/img/product/orange-front.webp" width="327" height="1150" alt="L-Carnitine 3000 orange effervescent tablets" draggable="false" decoding="async"></div>
+              <div class="p" style="--l:76%;--h:62%;--b:25%;--d:14;--z:2;--rd:820ms;--fd:-3.6s"><img src="assets/img/product/strawberry-front.webp" width="329" height="1150" alt="L-Carnitine 3000 strawberry effervescent tablets" draggable="false" decoding="async"></div>
+              <div class="p" style="--l:21%;--h:53%;--b:19%;--d:24;--z:3;--rd:450ms;--fd:-2.4s"><img src="assets/img/product/cutcore-front.webp" width="619" height="1150" alt="CutCore metabolic capsules" draggable="false" fetchpriority="high" decoding="async"></div>
+              <div class="p" style="--l:50%;--h:53%;--b:19%;--d:24;--z:3;--rd:580ms;--fd:-4.8s"><img src="assets/img/product/appetite-front.webp" width="610" height="1150" alt="Appetite Control satiety capsules" draggable="false" decoding="async"></div>
+
+              <p class="stage-tag inset-x-0 bottom-[4%] mx-auto w-fit whitespace-nowrap rounded-full bg-white px-3.5 py-1.5 text-[0.6rem] sm:px-4 sm:py-2 sm:text-[0.68rem] font-bold uppercase tracking-[0.16em] text-ink shadow-soft" style="--d:1.5s;animation:none">4 products · <span class="text-brand">0 hidden blends</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ TRUST STRIP (white) ============================ -->
+    <div class="relative z-10 -mt-14 px-5 sm:px-8">
+      <ul class="reveal mx-auto grid max-w-page grid-cols-2 gap-y-5 rounded-3xl bg-white px-5 py-6 text-ink shadow-soft sm:px-8 lg:grid-cols-4 lg:py-7">
+        <li class="trust-item flex items-center gap-3.5 lg:justify-center"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand/10 text-brand"><svg class="ico"><use href="#i-truck"/></svg></span><p class="text-[0.82rem] leading-tight"><b class="block font-bold uppercase tracking-wide">Free shipping</b><span class="text-smoke">Across India</span></p></li>
+        <li class="trust-item flex items-center gap-3.5 lg:justify-center"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand/10 text-brand"><svg class="ico"><use href="#i-shield"/></svg></span><p class="text-[0.82rem] leading-tight"><b class="block font-bold uppercase tracking-wide">FSSAI-registered</b><span class="text-smoke">Manufacturing facility</span></p></li>
+        <li class="trust-item flex items-center gap-3.5 lg:justify-center"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand/10 text-brand"><svg class="ico"><use href="#i-award"/></svg></span><p class="text-[0.82rem] leading-tight"><b class="block font-bold uppercase tracking-wide">GMP &amp; ISO</b><span class="text-smoke">Certified facility</span></p></li>
+        <li class="trust-item flex items-center gap-3.5 lg:justify-center"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand/10 text-brand"><svg class="ico"><use href="#i-doc"/></svg></span><p class="text-[0.82rem] leading-tight"><b class="block font-bold uppercase tracking-wide">100% label</b><span class="text-smoke">Every ingredient printed</span></p></li>
+      </ul>
+    </div>
+
+    <!-- ============================ GOALS (light) ============================ -->
+    <section class="bg-band -mt-20 overflow-hidden pb-0 pt-36 sm:pt-40" aria-labelledby="goals-title">
+      <div class="wrap">
+        <div class="reveal flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p class="eyebrow">One kit · every goal</p>
+            <h2 id="goals-title" class="display h2">Shop by goal</h2>
+          </div>
+          <a href="#inside" class="group inline-flex items-center gap-2 text-sm font-semibold text-fg hover:text-brand">See what each product does <svg class="ico arr !h-4 !w-4 transition group-hover:translate-x-1"><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <div class="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5">
+          <a href="#p-cutcore" class="goal reveal col-span-2 sm:col-span-1" style="--d:0ms">
+            <img class="goal-img" src="assets/img/product/cutcore-front.webp" width="619" height="1150" alt="" loading="lazy" decoding="async">
+            <span class="goal-ic grid h-11 w-11 place-items-center rounded-full"><svg class="ico"><use href="#i-flame"/></svg></span>
+            <span class="display mt-4 text-[1.12rem] sm:text-[1.45rem]">Fat loss<br>support</span>
+            <span class="goal-sub mt-1 flex items-center gap-1.5 text-xs">CutCore · L-Carnitine<svg class="ico goal-arr !h-3.5 !w-3.5 text-brand"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a href="#p-cutcore" class="goal reveal" style="--d:70ms">
+            <img class="goal-img" src="assets/img/product/cutcore-back.webp" width="654" height="1150" alt="" loading="lazy" decoding="async">
+            <span class="goal-ic grid h-11 w-11 place-items-center rounded-full"><svg class="ico"><use href="#i-bolt"/></svg></span>
+            <span class="display mt-4 text-[1.12rem] sm:text-[1.45rem]">Energy<br>&amp; focus</span>
+            <span class="goal-sub mt-1 flex items-center gap-1.5 text-xs">CutCore<svg class="ico goal-arr !h-3.5 !w-3.5 text-brand"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a href="#p-appetite" class="goal reveal" style="--d:140ms">
+            <img class="goal-img" src="assets/img/product/appetite-front.webp" width="610" height="1150" alt="" loading="lazy" decoding="async">
+            <span class="goal-ic grid h-11 w-11 place-items-center rounded-full"><svg class="ico"><use href="#i-plate"/></svg></span>
+            <span class="display mt-4 text-[1.12rem] sm:text-[1.45rem]">Appetite<br>control</span>
+            <span class="goal-sub mt-1 flex items-center gap-1.5 text-xs">Appetite Control<svg class="ico goal-arr !h-3.5 !w-3.5 text-brand"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a href="#p-orange" class="goal reveal" style="--d:210ms">
+            <img class="goal-img !h-[80%]" src="assets/img/product/orange-front.webp" width="327" height="1150" alt="" loading="lazy" decoding="async">
+            <span class="goal-ic grid h-11 w-11 place-items-center rounded-full"><svg class="ico"><use href="#i-dumbbell"/></svg></span>
+            <span class="display mt-4 text-[1.12rem] sm:text-[1.45rem]">Workout<br>endurance</span>
+            <span class="goal-sub mt-1 flex items-center gap-1.5 text-xs">L-Carnitine 3000<svg class="ico goal-arr !h-3.5 !w-3.5 text-brand"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a href="#shop" class="goal reveal" style="--d:280ms">
+            <img class="goal-img !h-[80%]" src="assets/img/product/strawberry-front.webp" width="329" height="1150" alt="" loading="lazy" decoding="async">
+            <span class="goal-ic grid h-11 w-11 place-items-center rounded-full"><svg class="ico"><use href="#i-heart"/></svg></span>
+            <span class="display mt-4 text-[1.12rem] sm:text-[1.45rem]">30-day<br>routine</span>
+            <span class="goal-sub mt-1 flex items-center gap-1.5 text-xs">The complete kit<svg class="ico goal-arr !h-3.5 !w-3.5 text-brand"><use href="#i-arrow"/></svg></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- big scroll-linked words, from the box: burn · control · transform -->
+      <div class="mt-16 select-none overflow-hidden pb-10 sm:mt-20" aria-hidden="true">
+        <div class="mq-row display text-[#d4d1ca] text-[3.4rem] leading-none sm:text-[6.5rem]" data-scroll-x="-1">
+          Burn <span class="outline-text">·</span> Control <span class="outline-text">· Energise ·</span> Transform <span class="outline-text">·</span> Burn <span class="outline-text">·</span> Control <span class="outline-text">· Energise ·</span> Transform
+        </div>
+        <div class="mq-row display text-[#d4d1ca] -ml-[40%] mt-1 text-[3.4rem] leading-none sm:text-[6.5rem]" data-scroll-x="1">
+          <span class="outline-text">30-day program ·</span> Unisex formula <span class="outline-text">· 30-day program ·</span> Unisex formula <span class="outline-text">· 30-day program</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ INSIDE THE KIT (light) ============================ -->
+    <section id="inside" class="section overflow-hidden bg-white" aria-labelledby="inside-title">
+      <div class="wrap">
+        <div class="grid items-end gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="reveal">
+            <p class="eyebrow">What’s inside</p>
+            <h2 id="inside-title" class="display h2">Four products.<br><span class="text-brand">One system.</span></h2>
+          </div>
+          <p class="reveal text-base leading-relaxed text-smoke lg:pb-2" style="--d:100ms">Each pack does one job and tells you exactly how it does it. Tap a thumbnail to flip between front, back and the nutrition panel — tap the photo to read it full-size.</p>
+        </div>
+
+        <div class="mt-14 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <!-- CutCore -->
+          <article id="p-cutcore" class="reveal" style="--d:0ms">
+            <div class="pcard card flex h-full flex-col" data-tilt>
+              <span class="bar-top" aria-hidden="true"></span>
+              <div class="switcher" data-switcher>
+                <button type="button" class="sw-main" data-lightbox="assets/img/product/cutcore-front.webp" data-alt="CutCore Metabolic capsules — Front" aria-label="View CutCore Metabolic capsules larger">
+                  <span class="sw-glow" aria-hidden="true"></span>
+                  <img src="assets/img/product/cutcore-front.webp" width="619" height="1150" loading="lazy" decoding="async" alt="CutCore Metabolic capsules — Front" class="is-on" data-sw-img><img src="assets/img/product/cutcore-back.webp" width="654" height="1150" loading="lazy" decoding="async" alt="CutCore Metabolic capsules — Back" data-sw-img><img src="assets/img/product/cutcore-facts.webp" width="662" height="1150" loading="lazy" decoding="async" alt="CutCore Metabolic capsules — Facts" data-sw-img>
+                  <span class="sw-zoom" aria-hidden="true">Tap to enlarge</span>
+                </button>
+                <div class="sw-thumbs"><button type="button" class="sw-thumb is-active" data-sw-thumb="0" aria-label="CutCore Metabolic capsules: Front" aria-pressed="true"><img src="assets/img/product/cutcore-front.webp" width="619" height="1150" loading="lazy" decoding="async" alt=""><span>Front</span></button><button type="button" class="sw-thumb" data-sw-thumb="1" aria-label="CutCore Metabolic capsules: Back" aria-pressed="false"><img src="assets/img/product/cutcore-back.webp" width="654" height="1150" loading="lazy" decoding="async" alt=""><span>Back</span></button><button type="button" class="sw-thumb" data-sw-thumb="2" aria-label="CutCore Metabolic capsules: Facts" aria-pressed="false"><img src="assets/img/product/cutcore-facts.webp" width="662" height="1150" loading="lazy" decoding="async" alt=""><span>Facts</span></button></div>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center justify-between gap-3"><p class="text-[0.66rem] font-bold uppercase tracking-[0.18em] text-brand">Morning · Metabolism</p><p class="text-[0.66rem] font-semibold uppercase tracking-wider text-smoke">30 veg caps</p></div>
+                <h3 class="display mt-3 text-[1.6rem]">CutCore</h3>
+                <p class="text-sm font-medium text-smoke">Metabolic capsules</p>
+                <p class="mt-3 flex-1 text-sm leading-relaxed text-ink/70">Green tea (95% EGCG), green coffee bean, L-theanine and grains of paradise — built to support fat metabolism, energy and focus.</p>
+                <p class="mt-5 flex items-center gap-2.5 rounded-xl border border-line bg-paper px-3.5 py-3 text-[0.7rem] font-semibold uppercase tracking-wider text-fg"><svg class="ico !h-4 !w-4 text-brand"><use href="#i-sun"/></svg>1 capsule, 30 min before breakfast</p>
+              </div>
+            </div>
+          </article>
+          <!-- Appetite Control -->
+          <article id="p-appetite" class="reveal" style="--d:80ms">
+            <div class="pcard card flex h-full flex-col" style="--accent:#5BC21E" data-tilt>
+              <span class="bar-top" aria-hidden="true"></span>
+              <div class="switcher" data-switcher>
+                <button type="button" class="sw-main" data-lightbox="assets/img/product/appetite-front.webp" data-alt="Appetite Control Satiety capsules — Front" aria-label="View Appetite Control Satiety capsules larger">
+                  <span class="sw-glow" aria-hidden="true"></span>
+                  <img src="assets/img/product/appetite-front.webp" width="610" height="1150" loading="lazy" decoding="async" alt="Appetite Control Satiety capsules — Front" class="is-on" data-sw-img><img src="assets/img/product/appetite-back.webp" width="627" height="1150" loading="lazy" decoding="async" alt="Appetite Control Satiety capsules — Back" data-sw-img><img src="assets/img/product/appetite-facts.webp" width="652" height="1150" loading="lazy" decoding="async" alt="Appetite Control Satiety capsules — Ingredients" data-sw-img>
+                  <span class="sw-zoom" aria-hidden="true">Tap to enlarge</span>
+                </button>
+                <div class="sw-thumbs"><button type="button" class="sw-thumb is-active" data-sw-thumb="0" aria-label="Appetite Control Satiety capsules: Front" aria-pressed="true"><img src="assets/img/product/appetite-front.webp" width="610" height="1150" loading="lazy" decoding="async" alt=""><span>Front</span></button><button type="button" class="sw-thumb" data-sw-thumb="1" aria-label="Appetite Control Satiety capsules: Back" aria-pressed="false"><img src="assets/img/product/appetite-back.webp" width="627" height="1150" loading="lazy" decoding="async" alt=""><span>Back</span></button><button type="button" class="sw-thumb" data-sw-thumb="2" aria-label="Appetite Control Satiety capsules: Ingredients" aria-pressed="false"><img src="assets/img/product/appetite-facts.webp" width="652" height="1150" loading="lazy" decoding="async" alt=""><span>Ingredients</span></button></div>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center justify-between gap-3"><p class="text-[0.66rem] font-bold uppercase tracking-[0.18em] text-brand">Before meals · Satiety</p><p class="text-[0.66rem] font-semibold uppercase tracking-wider text-smoke">30 veg caps</p></div>
+                <h3 class="display mt-3 text-[1.6rem]">Appetite Control</h3>
+                <p class="text-sm font-medium text-smoke">Satiety capsules</p>
+                <p class="mt-3 flex-1 text-sm leading-relaxed text-ink/70">Helps you feel fuller for longer, reduce unnecessary cravings and support healthy portion control.</p>
+                <p class="mt-5 flex items-center gap-2.5 rounded-xl border border-line bg-paper px-3.5 py-3 text-[0.7rem] font-semibold uppercase tracking-wider text-fg"><svg class="ico !h-4 !w-4 text-brand"><use href="#i-plate"/></svg>1 capsule, 30 min before meals</p>
+              </div>
+            </div>
+          </article>
+          <!-- L-Carnitine Orange -->
+          <article id="p-orange" class="reveal" style="--d:160ms">
+            <div class="pcard card flex h-full flex-col" style="--accent:#F97316" data-tilt>
+              <span class="bar-top" aria-hidden="true"></span>
+              <div class="switcher" data-switcher>
+                <button type="button" class="sw-main" data-lightbox="assets/img/product/orange-front.webp" data-alt="L-Carnitine 3000 Orange effervescent — Front" aria-label="View L-Carnitine 3000 Orange effervescent larger">
+                  <span class="sw-glow" aria-hidden="true"></span>
+                  <img src="assets/img/product/orange-front.webp" width="327" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Orange effervescent — Front" class="is-on" data-sw-img><img src="assets/img/product/orange-back.webp" width="327" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Orange effervescent — Back" data-sw-img><img src="assets/img/product/orange-facts.webp" width="327" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Orange effervescent — Facts" data-sw-img>
+                  <span class="sw-zoom" aria-hidden="true">Tap to enlarge</span>
+                </button>
+                <div class="sw-thumbs"><button type="button" class="sw-thumb is-active" data-sw-thumb="0" aria-label="L-Carnitine 3000 Orange effervescent: Front" aria-pressed="true"><img src="assets/img/product/orange-front.webp" width="327" height="1150" loading="lazy" decoding="async" alt=""><span>Front</span></button><button type="button" class="sw-thumb" data-sw-thumb="1" aria-label="L-Carnitine 3000 Orange effervescent: Back" aria-pressed="false"><img src="assets/img/product/orange-back.webp" width="327" height="1150" loading="lazy" decoding="async" alt=""><span>Back</span></button><button type="button" class="sw-thumb" data-sw-thumb="2" aria-label="L-Carnitine 3000 Orange effervescent: Facts" aria-pressed="false"><img src="assets/img/product/orange-facts.webp" width="327" height="1150" loading="lazy" decoding="async" alt=""><span>Facts</span></button></div>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center justify-between gap-3"><p class="text-[0.66rem] font-bold uppercase tracking-[0.18em] text-brand">Daily · Energy</p><p class="text-[0.66rem] font-semibold uppercase tracking-wider text-smoke">15 tablets</p></div>
+                <h3 class="display mt-3 text-[1.6rem]">L-Carnitine 3000</h3>
+                <p class="text-sm font-medium text-smoke">Orange effervescent</p>
+                <p class="mt-3 flex-1 text-sm leading-relaxed text-ink/70">3000 mg L-Carnitine helps transport fatty acids into mitochondria to support energy, endurance and fat metabolism — with Vitamin B6 &amp; B12.</p>
+                <p class="mt-5 flex items-center gap-2.5 rounded-xl border border-line bg-paper px-3.5 py-3 text-[0.7rem] font-semibold uppercase tracking-wider text-fg"><svg class="ico !h-4 !w-4 text-brand"><use href="#i-drop"/></svg>1 tablet in 200–250 ml cold water</p>
+              </div>
+            </div>
+          </article>
+          <!-- L-Carnitine Strawberry -->
+          <article id="p-strawberry" class="reveal" style="--d:240ms">
+            <div class="pcard card flex h-full flex-col" style="--accent:#E11D48" data-tilt>
+              <span class="bar-top" aria-hidden="true"></span>
+              <div class="switcher" data-switcher>
+                <button type="button" class="sw-main" data-lightbox="assets/img/product/strawberry-front.webp" data-alt="L-Carnitine 3000 Strawberry effervescent — Front" aria-label="View L-Carnitine 3000 Strawberry effervescent larger">
+                  <span class="sw-glow" aria-hidden="true"></span>
+                  <img src="assets/img/product/strawberry-front.webp" width="329" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Strawberry effervescent — Front" class="is-on" data-sw-img><img src="assets/img/product/strawberry-back.webp" width="330" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Strawberry effervescent — Back" data-sw-img><img src="assets/img/product/strawberry-facts.webp" width="328" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Strawberry effervescent — Facts" data-sw-img>
+                  <span class="sw-zoom" aria-hidden="true">Tap to enlarge</span>
+                </button>
+                <div class="sw-thumbs"><button type="button" class="sw-thumb is-active" data-sw-thumb="0" aria-label="L-Carnitine 3000 Strawberry effervescent: Front" aria-pressed="true"><img src="assets/img/product/strawberry-front.webp" width="329" height="1150" loading="lazy" decoding="async" alt=""><span>Front</span></button><button type="button" class="sw-thumb" data-sw-thumb="1" aria-label="L-Carnitine 3000 Strawberry effervescent: Back" aria-pressed="false"><img src="assets/img/product/strawberry-back.webp" width="330" height="1150" loading="lazy" decoding="async" alt=""><span>Back</span></button><button type="button" class="sw-thumb" data-sw-thumb="2" aria-label="L-Carnitine 3000 Strawberry effervescent: Facts" aria-pressed="false"><img src="assets/img/product/strawberry-facts.webp" width="328" height="1150" loading="lazy" decoding="async" alt=""><span>Facts</span></button></div>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center justify-between gap-3"><p class="text-[0.66rem] font-bold uppercase tracking-[0.18em] text-brand">Daily · Energy</p><p class="text-[0.66rem] font-semibold uppercase tracking-wider text-smoke">15 tablets</p></div>
+                <h3 class="display mt-3 text-[1.6rem]">L-Carnitine 3000</h3>
+                <p class="text-sm font-medium text-smoke">Strawberry effervescent</p>
+                <p class="mt-3 flex-1 text-sm leading-relaxed text-ink/70">The same 3000 mg L-Carnitine formula with Vitamin B6 &amp; B12, in a strawberry fizz. Fast dissolving and sugar free.</p>
+                <p class="mt-5 flex items-center gap-2.5 rounded-xl border border-line bg-paper px-3.5 py-3 text-[0.7rem] font-semibold uppercase tracking-wider text-fg"><svg class="ico !h-4 !w-4 text-brand"><use href="#i-drop"/></svg>1 tablet in 200–250 ml cold water</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <ul class="reveal mt-12 flex flex-wrap justify-center gap-2.5 text-[0.7rem] font-bold uppercase tracking-[0.14em] text-ink">
+          <li class="rounded-full border border-line bg-paper px-4 py-2">No added sugar</li>
+          <li class="rounded-full border border-line bg-paper px-4 py-2">No artificial colours</li>
+          <li class="rounded-full border border-line bg-paper px-4 py-2">Non-GMO</li>
+          <li class="rounded-full border border-line bg-paper px-4 py-2">Gluten free</li>
+          <li class="rounded-full border border-line bg-paper px-4 py-2">Vegetarian friendly</li>
+          <li class="rounded-full bg-brand px-4 py-2 text-white">No proprietary blends</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================ FEATURED PRODUCT (semi-dark) ============================ -->
+    <section id="shop" class="section tone-dark bg-semi relative overflow-hidden" aria-labelledby="shop-title">
+      <span class="slash right-[-5%] top-[10%] h-2 w-[20%] !opacity-60" aria-hidden="true"></span>
+      <div class="wrap grid items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
         <!-- Product gallery (all 12 pack shots) -->
-        <div class="gallery" data-gallery aria-roledescription="carousel" aria-label="Supreme Nutrition product gallery">
+        <div class="reveal gallery" data-gallery aria-roledescription="carousel" aria-label="Supreme Nutrition product gallery">
           <div class="gal-stage" data-gal-stage>
             <div class="gal-glow" aria-hidden="true"></div>
             <div class="gal-track" data-gal-track>
-              <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="1 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/cutcore-front.webp" data-alt="CutCore · Front" aria-label="View CutCore · Front larger" tabindex="-1"><img src="assets/img/product/cutcore-front.webp" width="619" height="1150" alt="CutCore · Front" draggable="false" fetchpriority="high" decoding="async"></button></div>
+              <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="1 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/cutcore-front.webp" data-alt="CutCore · Front" aria-label="View CutCore · Front larger" tabindex="-1"><img src="assets/img/product/cutcore-front.webp" width="619" height="1150" alt="CutCore · Front" draggable="false" decoding="async"></button></div>
               <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="2 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/cutcore-back.webp" data-alt="CutCore · Back" aria-label="View CutCore · Back larger" tabindex="-1"><img src="assets/img/product/cutcore-back.webp" width="654" height="1150" alt="CutCore · Back" draggable="false" decoding="async"></button></div>
               <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="3 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/cutcore-facts.webp" data-alt="CutCore · Nutrition facts" aria-label="View CutCore · Nutrition facts larger" tabindex="-1"><img src="assets/img/product/cutcore-facts.webp" width="662" height="1150" alt="CutCore · Nutrition facts" draggable="false" loading="lazy" decoding="async"></button></div>
               <div class="gal-slide" role="group" aria-roledescription="slide" aria-label="4 of 12"><button type="button" class="gal-open" data-lightbox="assets/img/product/appetite-front.webp" data-alt="Appetite Control · Front" aria-label="View Appetite Control · Front larger" tabindex="-1"><img src="assets/img/product/appetite-front.webp" width="610" height="1150" alt="Appetite Control · Front" draggable="false" loading="lazy" decoding="async"></button></div>
@@ -150,298 +418,344 @@
             <button type="button" class="gal-thumb" data-gal-thumb="11" aria-label="Show L-Carnitine 3000 Strawberry · Nutrition facts" aria-pressed="false"><img src="assets/img/product/strawberry-facts.webp" width="328" height="1150" loading="lazy" decoding="async" alt=""></button>
           </div>
         </div>
-      </div>
 
-      <!-- Trust marquee -->
-      <div class="marquee relative overflow-hidden border-y border-white/10 bg-black/50 py-4" aria-label="Quality highlights">
-        <div class="marquee-track flex items-center gap-10 whitespace-nowrap text-xs font-semibold uppercase tracking-[0.22em] text-silver/80">
-          <span>No proprietary blends</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span>No added sugar</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span>Non-GMO &amp; gluten free</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span>Vegetarian friendly</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span>GMP &amp; ISO certified</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span>Made in India</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span>FSSAI-registered facility</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span>Ships across India</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span aria-hidden="true">No proprietary blends</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span aria-hidden="true">No added sugar</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span aria-hidden="true">Non-GMO &amp; gluten free</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span aria-hidden="true">Vegetarian friendly</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span aria-hidden="true">GMP &amp; ISO certified</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span aria-hidden="true">Made in India</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span aria-hidden="true">FSSAI-registered facility</span><span class="text-brand" aria-hidden="true">✦</span>
-          <span aria-hidden="true">Ships across India</span><span class="text-brand" aria-hidden="true">✦</span>
-        </div>
-      </div>
-    </section>
+        <div class="reveal" style="--d:120ms">
+          <div class="flex flex-wrap items-center gap-2"><span class="chip-red">Bestseller</span><span class="chip">Weight management</span><span class="chip">Unisex</span></div>
+          <h2 id="shop-title" class="display h2 text-white">The fat loss kit<span class="text-brand">.</span></h2>
+          <p class="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-white/60">30-day program · Burn · Control · Transform</p>
+          <p class="lead">A 30-day fat-loss program in one box: CutCore metabolic capsules before breakfast, Appetite Control before meals, and L-Carnitine 3000 fizz in orange and strawberry — plus a diet guide and progress tracker.</p>
 
-    <!-- ============================ WHO WE ARE ============================ -->
-    <section id="about" class="section" aria-labelledby="about-title">
-      <div class="wrap grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-        <div class="reveal">
-          <p class="eyebrow">Who we are</p>
-          <h2 id="about-title" class="h2">Supplements with <span class="text-brand">nothing to hide.</span></h2>
-          <p class="lead">Supreme Nutrition is an Indian wellness house built on one refusal: we will not ask for your trust and then hide the label. Every kit we ship lists every ingredient, carries its batch code, and arrives with a usage card written for humans — not lawyers.</p>
-        </div>
-        <dl class="reveal grid grid-cols-3 gap-3 sm:gap-4" style="--d:120ms">
-          <div class="card p-5 text-center sm:p-7"><dt class="order-2 mt-2 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-mute sm:text-xs">Products in kit № 01</dt><dd class="text-4xl font-extrabold text-white sm:text-5xl">04</dd></div>
-          <div class="card p-5 text-center sm:p-7"><dt class="order-2 mt-2 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-mute sm:text-xs">Hidden blends</dt><dd class="text-4xl font-extrabold text-white sm:text-5xl">00</dd></div>
-          <div class="card p-5 text-center sm:p-7"><dt class="order-2 mt-2 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-mute sm:text-xs">Label disclosure</dt><dd class="text-4xl font-extrabold text-brand sm:text-5xl">100%</dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ============================ FEATURED PRODUCT ============================ -->
-    <section id="shop" class="section bg-band" aria-labelledby="shop-title">
-      <div class="wrap">
-        <div class="reveal max-w-2xl">
-          <p class="eyebrow">Featured product</p>
-          <h2 id="shop-title" class="h2">The fat loss kit</h2>
-          <p class="lead">One kit. Four products. A 30-day program. Zero hidden ingredients.</p>
-        </div>
-
-        <div class="reveal card mt-12 grid overflow-hidden lg:grid-cols-2" style="--d:100ms">
-          <div class="relative bg-black">
-            <img src="assets/img/kit-box-front.webp" width="666" height="732" loading="lazy" decoding="async" alt="Fat loss kit — 30-day program box artwork" class="h-full w-full object-cover">
-            <span class="absolute left-5 top-5 rounded-full bg-brand px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white shadow-glow">Save ₹500</span>
+          <div class="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 text-sm sm:grid-cols-3">
+            <div class="bg-char p-4"><p class="display text-2xl text-white">30</p><p class="text-xs text-mute">CutCore veg capsules</p></div>
+            <div class="bg-char p-4"><p class="display text-2xl text-white">30</p><p class="text-xs text-mute">Appetite Control capsules</p></div>
+            <div class="bg-char p-4"><p class="display text-2xl text-white">15<span class="text-brand">+</span>15</p><p class="text-xs text-mute">L-Carnitine 3000 fizz tablets</p></div>
+            <div class="bg-char p-4"><p class="display text-2xl text-white">01</p><p class="text-xs text-mute">30-day diet guide</p></div>
+            <div class="bg-char p-4"><p class="display text-2xl text-white">01</p><p class="text-xs text-mute">Progress tracker</p></div>
+            <div class="bg-brand p-4"><p class="display text-2xl text-white">00</p><p class="text-xs text-white/85">Hidden ingredients</p></div>
           </div>
-          <div class="flex flex-col justify-center p-7 sm:p-12">
-            <span class="chip w-fit">Weight management</span>
-            <h3 class="mt-5 text-3xl font-extrabold sm:text-4xl">Fat loss kit — 30-day program</h3>
-            <p class="mt-4 leading-relaxed text-mute">A 30-day fat-loss program in one box: CutCore metabolic capsules before breakfast, Appetite Control before meals, and L-Carnitine 3000 fizz in orange and strawberry — plus a diet guide and progress tracker. Every ingredient, printed in full.</p>
 
-            <ul class="mt-7 space-y-3.5 text-[0.95rem] text-silver">
-              <li class="flex gap-3"><svg class="mt-1 h-4 w-4 shrink-0 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Full-label disclosure — every ingredient and quantity printed per capsule</li>
-              <li class="flex gap-3"><svg class="mt-1 h-4 w-4 shrink-0 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>30-day transformation plan inside — diet guide, workout support, progress tracker</li>
-              <li class="flex gap-3"><svg class="mt-1 h-4 w-4 shrink-0 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>No added sugar · no artificial colours · non-GMO · gluten free</li>
-              <li class="flex gap-3"><svg class="mt-1 h-4 w-4 shrink-0 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Vegetarian friendly — veg capsules and effervescent tablets</li>
-              <li class="flex gap-3"><svg class="mt-1 h-4 w-4 shrink-0 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Made in an FSSAI-registered, GMP &amp; ISO certified facility</li>
-            </ul>
+          <ul class="mt-7 space-y-3 text-[0.95rem] text-silver">
+            <li class="flex gap-3"><svg class="ico mt-0.5 !h-5 !w-5 text-brand"><use href="#i-check"/></svg>Full-label disclosure — every ingredient and quantity printed per capsule</li>
+            <li class="flex gap-3"><svg class="ico mt-0.5 !h-5 !w-5 text-brand"><use href="#i-check"/></svg>Made in an FSSAI-registered, GMP &amp; ISO certified facility</li>
+            <li class="flex gap-3"><svg class="ico mt-0.5 !h-5 !w-5 text-brand"><use href="#i-check"/></svg>Veg capsules and effervescent tablets — vegetarian friendly</li>
+          </ul>
 
-            <div class="mt-9 flex items-end gap-4 border-t border-white/10 pt-7">
-              <p class="text-4xl font-extrabold text-white">₹3,499</p>
-              <p class="pb-1 text-lg text-mute line-through">₹3,999</p>
-            </div>
-            <p class="mt-1 text-sm text-mute">Launch offer · MRP ₹3,999 · inclusive of all taxes</p>
-            <div class="mt-6 flex flex-col gap-3 sm:flex-row">
-              <a href="#order" class="btn btn-primary" data-buy>Buy now</a>
-              <button type="button" class="btn btn-wa" data-wa>Order on WhatsApp</button>
-            </div>
+          <div class="mt-9 flex flex-wrap items-end gap-x-5 gap-y-2 border-t border-white/10 pt-7">
+            <p class="display text-5xl text-white">₹3,499</p>
+            <p class="pb-1 text-lg text-mute line-through">₹3,999</p>
+            <span class="mb-1.5 rounded-md bg-brand/15 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-[#ff6b72]">Save ₹500</span>
+          </div>
+          <p class="mt-1 text-sm text-mute">Launch offer · inclusive of all taxes · free shipping</p>
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href="#order" class="btn btn-primary sm:min-w-[12rem]" data-buy data-magnet>Buy Now <svg class="ico arr !h-4 !w-4"><use href="#i-arrow"/></svg></a>
+            <button type="button" class="btn btn-outline" data-wa><svg class="ico !h-5 !w-5 text-[#25D366]"><use href="#i-wa"/></svg>Order on WhatsApp</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================ WHAT'S INSIDE ============================ -->
-    <section id="inside" class="section" aria-labelledby="inside-title">
-      <div class="wrap">
-        <div class="reveal max-w-2xl">
-          <p class="eyebrow">What’s inside</p>
-          <h2 id="inside-title" class="h2">Four products. <span class="text-brand">One system.</span></h2>
-        </div>
-
-        <div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-          <!-- CutCore -->
-          <article class="reveal card card-hover flex flex-col">
-            <div class="switcher" data-switcher>
-              <button type="button" class="sw-main" data-lightbox="assets/img/product/cutcore-front.webp" data-alt="CutCore Metabolic capsules — Front" aria-label="View CutCore Metabolic capsules larger">
-                <span class="sw-glow" aria-hidden="true"></span>
-                <img src="assets/img/product/cutcore-front.webp" width="619" height="1150" loading="lazy" decoding="async" alt="CutCore Metabolic capsules — Front" class="is-on" data-sw-img><img src="assets/img/product/cutcore-back.webp" width="654" height="1150" loading="lazy" decoding="async" alt="CutCore Metabolic capsules — Back" class="" data-sw-img><img src="assets/img/product/cutcore-facts.webp" width="662" height="1150" loading="lazy" decoding="async" alt="CutCore Metabolic capsules — Facts" class="" data-sw-img>
-                <span class="sw-zoom" aria-hidden="true">Tap to enlarge</span>
-              </button>
-              <div class="sw-thumbs"><button type="button" class="sw-thumb is-active" data-sw-thumb="0" aria-label="CutCore Metabolic capsules: Front" aria-pressed="true"><img src="assets/img/product/cutcore-front.webp" width="619" height="1150" loading="lazy" decoding="async" alt=""><span>Front</span></button><button type="button" class="sw-thumb" data-sw-thumb="1" aria-label="CutCore Metabolic capsules: Back" aria-pressed="false"><img src="assets/img/product/cutcore-back.webp" width="654" height="1150" loading="lazy" decoding="async" alt=""><span>Back</span></button><button type="button" class="sw-thumb" data-sw-thumb="2" aria-label="CutCore Metabolic capsules: Facts" aria-pressed="false"><img src="assets/img/product/cutcore-facts.webp" width="662" height="1150" loading="lazy" decoding="async" alt=""><span>Facts</span></button></div>
-            </div>
-            <div class="flex flex-1 flex-col p-6">
-              <p class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-brand">Morning · Metabolism</p>
-              <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-mute">30 veg capsules</p>
-              <h3 class="mt-3 text-xl font-bold">CutCore <span class="font-medium text-silver/80">Metabolic capsules</span></h3>
-              <p class="mt-3 flex-1 text-sm leading-relaxed text-mute">A science-backed blend of green tea (95% EGCG), green coffee bean, L-theanine and grains of paradise — built to support fat metabolism, energy and focus.</p>
-              <p class="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-xs font-semibold uppercase tracking-wider text-silver">1 capsule daily, 30 minutes before breakfast</p>
-            </div>
-          </article>
-          <!-- Appetite Control -->
-          <article class="reveal card card-hover flex flex-col" style="--d:80ms">
-            <div class="switcher" data-switcher>
-              <button type="button" class="sw-main" data-lightbox="assets/img/product/appetite-front.webp" data-alt="Appetite Control Satiety capsules — Front" aria-label="View Appetite Control Satiety capsules larger">
-                <span class="sw-glow" aria-hidden="true"></span>
-                <img src="assets/img/product/appetite-front.webp" width="610" height="1150" loading="lazy" decoding="async" alt="Appetite Control Satiety capsules — Front" class="is-on" data-sw-img><img src="assets/img/product/appetite-back.webp" width="627" height="1150" loading="lazy" decoding="async" alt="Appetite Control Satiety capsules — Back" class="" data-sw-img><img src="assets/img/product/appetite-facts.webp" width="652" height="1150" loading="lazy" decoding="async" alt="Appetite Control Satiety capsules — Ingredients" class="" data-sw-img>
-                <span class="sw-zoom" aria-hidden="true">Tap to enlarge</span>
-              </button>
-              <div class="sw-thumbs"><button type="button" class="sw-thumb is-active" data-sw-thumb="0" aria-label="Appetite Control Satiety capsules: Front" aria-pressed="true"><img src="assets/img/product/appetite-front.webp" width="610" height="1150" loading="lazy" decoding="async" alt=""><span>Front</span></button><button type="button" class="sw-thumb" data-sw-thumb="1" aria-label="Appetite Control Satiety capsules: Back" aria-pressed="false"><img src="assets/img/product/appetite-back.webp" width="627" height="1150" loading="lazy" decoding="async" alt=""><span>Back</span></button><button type="button" class="sw-thumb" data-sw-thumb="2" aria-label="Appetite Control Satiety capsules: Ingredients" aria-pressed="false"><img src="assets/img/product/appetite-facts.webp" width="652" height="1150" loading="lazy" decoding="async" alt=""><span>Ingredients</span></button></div>
-            </div>
-            <div class="flex flex-1 flex-col p-6">
-              <p class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-brand">Before meals · Satiety</p>
-              <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-mute">30 veg capsules</p>
-              <h3 class="mt-3 text-xl font-bold">Appetite Control <span class="font-medium text-silver/80">Satiety capsules</span></h3>
-              <p class="mt-3 flex-1 text-sm leading-relaxed text-mute">A fibre and plant-extract blend that helps you feel fuller for longer, reduce unnecessary cravings and support healthy portion control.</p>
-              <p class="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-xs font-semibold uppercase tracking-wider text-silver">1 capsule daily, 30 minutes before meals</p>
-            </div>
-          </article>
-          <!-- L-Carnitine Orange -->
-          <article class="reveal card card-hover flex flex-col" style="--d:160ms">
-            <div class="switcher" data-switcher>
-              <button type="button" class="sw-main" data-lightbox="assets/img/product/orange-front.webp" data-alt="L-Carnitine 3000 Orange effervescent — Front" aria-label="View L-Carnitine 3000 Orange effervescent larger">
-                <span class="sw-glow" aria-hidden="true"></span>
-                <img src="assets/img/product/orange-front.webp" width="327" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Orange effervescent — Front" class="is-on" data-sw-img><img src="assets/img/product/orange-back.webp" width="327" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Orange effervescent — Back" class="" data-sw-img><img src="assets/img/product/orange-facts.webp" width="327" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Orange effervescent — Facts" class="" data-sw-img>
-                <span class="sw-zoom" aria-hidden="true">Tap to enlarge</span>
-              </button>
-              <div class="sw-thumbs"><button type="button" class="sw-thumb is-active" data-sw-thumb="0" aria-label="L-Carnitine 3000 Orange effervescent: Front" aria-pressed="true"><img src="assets/img/product/orange-front.webp" width="327" height="1150" loading="lazy" decoding="async" alt=""><span>Front</span></button><button type="button" class="sw-thumb" data-sw-thumb="1" aria-label="L-Carnitine 3000 Orange effervescent: Back" aria-pressed="false"><img src="assets/img/product/orange-back.webp" width="327" height="1150" loading="lazy" decoding="async" alt=""><span>Back</span></button><button type="button" class="sw-thumb" data-sw-thumb="2" aria-label="L-Carnitine 3000 Orange effervescent: Facts" aria-pressed="false"><img src="assets/img/product/orange-facts.webp" width="327" height="1150" loading="lazy" decoding="async" alt=""><span>Facts</span></button></div>
-            </div>
-            <div class="flex flex-1 flex-col p-6">
-              <p class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-brand">Daily · Energy</p>
-              <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-mute">15 effervescent tablets</p>
-              <h3 class="mt-3 text-xl font-bold">L-Carnitine 3000 <span class="font-medium text-silver/80">Orange effervescent</span></h3>
-              <p class="mt-3 flex-1 text-sm leading-relaxed text-mute">L-Carnitine 3000 mg helps transport fatty acids into mitochondria to support energy production, endurance and fat metabolism — enriched with Vitamin B6 &amp; B12.</p>
-              <p class="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-xs font-semibold uppercase tracking-wider text-silver">Drop 1 tablet in 200–250 ml cold water, once daily</p>
-            </div>
-          </article>
-          <!-- L-Carnitine Berry -->
-          <article class="reveal card card-hover flex flex-col" style="--d:240ms">
-            <div class="switcher" data-switcher>
-              <button type="button" class="sw-main" data-lightbox="assets/img/product/strawberry-front.webp" data-alt="L-Carnitine 3000 Strawberry effervescent — Front" aria-label="View L-Carnitine 3000 Strawberry effervescent larger">
-                <span class="sw-glow" aria-hidden="true"></span>
-                <img src="assets/img/product/strawberry-front.webp" width="329" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Strawberry effervescent — Front" class="is-on" data-sw-img><img src="assets/img/product/strawberry-back.webp" width="330" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Strawberry effervescent — Back" class="" data-sw-img><img src="assets/img/product/strawberry-facts.webp" width="328" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Strawberry effervescent — Facts" class="" data-sw-img>
-                <span class="sw-zoom" aria-hidden="true">Tap to enlarge</span>
-              </button>
-              <div class="sw-thumbs"><button type="button" class="sw-thumb is-active" data-sw-thumb="0" aria-label="L-Carnitine 3000 Strawberry effervescent: Front" aria-pressed="true"><img src="assets/img/product/strawberry-front.webp" width="329" height="1150" loading="lazy" decoding="async" alt=""><span>Front</span></button><button type="button" class="sw-thumb" data-sw-thumb="1" aria-label="L-Carnitine 3000 Strawberry effervescent: Back" aria-pressed="false"><img src="assets/img/product/strawberry-back.webp" width="330" height="1150" loading="lazy" decoding="async" alt=""><span>Back</span></button><button type="button" class="sw-thumb" data-sw-thumb="2" aria-label="L-Carnitine 3000 Strawberry effervescent: Facts" aria-pressed="false"><img src="assets/img/product/strawberry-facts.webp" width="328" height="1150" loading="lazy" decoding="async" alt=""><span>Facts</span></button></div>
-            </div>
-            <div class="flex flex-1 flex-col p-6">
-              <p class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-brand">Daily · Energy</p>
-              <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-mute">15 effervescent tablets</p>
-              <h3 class="mt-3 text-xl font-bold">L-Carnitine 3000 <span class="font-medium text-silver/80">Strawberry effervescent</span></h3>
-              <p class="mt-3 flex-1 text-sm leading-relaxed text-mute">The same L-Carnitine 3000 mg formula with Vitamin B6 &amp; B12, in a refreshing strawberry fizz. Fast dissolving and sugar free.</p>
-              <p class="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-xs font-semibold uppercase tracking-wider text-silver">Drop 1 tablet in 200–250 ml cold water, once daily</p>
-            </div>
-          </article>
-        </div>
-        <p class="mt-6 text-sm text-mute">Tap a thumbnail to flip between front, back and nutrition panel — tap the photo to enlarge.</p>
-      </div>
-    </section>
-
-    <!-- ============================ WHY SUPREME ============================ -->
-    <section id="why" class="section bg-band" aria-labelledby="why-title">
-      <div class="wrap grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-        <div class="reveal lg:sticky lg:top-28 lg:self-start">
-          <p class="eyebrow">Why Supreme</p>
-          <h2 id="why-title" class="h2">Most supplements ask for trust. <span class="text-brand">We print the evidence.</span></h2>
-          <img src="assets/img/kit-hero.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Supreme Nutrition weight management launch kit — CutCore, Appetite Control and L-Carnitine 3000" class="mt-10 hidden w-full rounded-3xl border border-white/10 shadow-card lg:block">
-        </div>
-        <div class="grid gap-5">
-          <article class="reveal card card-hover flex gap-5 p-7">
-            <span class="icon-box shrink-0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span>
-            <div><h3 class="text-xl font-bold">Full-label transparency</h3><p class="mt-2 text-mute">Every ingredient and quantity, printed in plain language. If we won’t print it, we won’t sell it.</p></div>
-          </article>
-          <article class="reveal card card-hover flex gap-5 p-7" style="--d:100ms">
-            <span class="icon-box shrink-0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-            <div><h3 class="text-xl font-bold">Built for Indian routines</h3><p class="mt-2 text-mute">Designed around real Indian meals and workdays — breakfast blends, afternoon fibre, evening tea.</p></div>
-          </article>
-          <article class="reveal card card-hover flex gap-5 p-7" style="--d:200ms">
-            <span class="icon-box shrink-0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.400 8.500 8 10 4.600-1.500 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
-            <div><h3 class="text-xl font-bold">Quality you can trace</h3><p class="mt-2 text-mute">Batch codes on every unit and an FSSAI-registered facility behind every kit we ship.</p></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ HOW IT WORKS ============================ -->
-    <section id="how" class="section" aria-labelledby="how-title">
-      <div class="wrap">
-        <div class="reveal max-w-2xl">
+    <!-- ============================ HOW IT WORKS (light) ============================ -->
+    <section id="how" class="section bg-band relative overflow-hidden" aria-labelledby="how-title">
+      <div class="wrap grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+        <div class="reveal lg:sticky lg:top-32 lg:self-start">
           <p class="eyebrow">How it works</p>
-          <h2 id="how-title" class="h2">Simple by design.</h2>
+          <h2 id="how-title" class="display h2">Your day,<br><span class="text-brand">sorted.</span></h2>
+          <p class="lead">Three moments a day, printed on every pack. No guesswork, no complicated stacks — just a routine that fits real Indian meals and workdays.</p>
+          <div class="mt-10 grid grid-cols-3 gap-3">
+            <div class="rounded-2xl border border-line bg-surface p-4"><p class="display text-4xl text-fg"><span data-count="30">30</span></p><p class="mt-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-fg2">Day program</p></div>
+            <div class="rounded-2xl border border-line bg-surface p-4"><p class="display text-4xl text-fg"><span data-count="3">3</span><span class="text-brand">×</span></p><p class="mt-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-fg2">Moments a day</p></div>
+            <div class="rounded-2xl border border-brand/25 bg-white p-4"><p class="display text-4xl text-fg"><span data-count="4">4</span></p><p class="mt-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-fg2">Products</p></div>
+          </div>
         </div>
-        <ol class="mt-12 grid gap-5 md:grid-cols-3">
-          <li class="reveal card p-8">
-            <span class="text-6xl font-extrabold text-transparent [-webkit-text-stroke:1px_rgba(242,13,24,.8)]" aria-hidden="true">01</span>
-            <h3 class="mt-4 text-xl font-bold">Unbox your kit</h3>
-            <p class="mt-3 text-mute">Four products in one box — CutCore and Appetite Control capsules, L-Carnitine 3000 fizz in two flavours, plus a 30-day diet guide and progress tracker.</p>
+
+        <ol class="relative" data-timeline>
+          <span class="rail" aria-hidden="true"><i></i></span>
+          <li class="step reveal relative pb-10 pl-16">
+            <span class="node absolute left-0 top-0 grid h-12 w-12 place-items-center rounded-full border border-line bg-white text-fg"><svg class="ico"><use href="#i-sun"/></svg></span>
+            <div class="step-card rounded-3xl border border-line bg-surface p-6 sm:p-7">
+              <p class="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-brand">Step 01 · Before breakfast</p>
+              <h3 class="display mt-2 text-2xl sm:text-3xl">CutCore</h3>
+              <p class="mt-2 text-fg2">1 capsule, 30 minutes before breakfast — green tea, green coffee bean and L-theanine to start the day.</p>
+            </div>
           </li>
-          <li class="reveal card p-8" style="--d:100ms">
-            <span class="text-6xl font-extrabold text-transparent [-webkit-text-stroke:1px_rgba(242,13,24,.8)]" aria-hidden="true">02</span>
-            <h3 class="mt-4 text-xl font-bold">Follow the label</h3>
-            <p class="mt-3 text-mute">CutCore 30 minutes before breakfast, Appetite Control 30 minutes before meals, and one L-Carnitine tablet dissolved in cold water daily.</p>
+          <li class="step reveal relative pb-10 pl-16">
+            <span class="node absolute left-0 top-0 grid h-12 w-12 place-items-center rounded-full border border-line bg-white text-fg"><svg class="ico"><use href="#i-plate"/></svg></span>
+            <div class="step-card rounded-3xl border border-line bg-surface p-6 sm:p-7">
+              <p class="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-brand">Step 02 · Before meals</p>
+              <h3 class="display mt-2 text-2xl sm:text-3xl">Appetite Control</h3>
+              <p class="mt-2 text-fg2">1 capsule, 30 minutes before meals — to help you feel fuller and keep portions in check.</p>
+            </div>
           </li>
-          <li class="reveal card p-8" style="--d:200ms">
-            <span class="text-6xl font-extrabold text-transparent [-webkit-text-stroke:1px_rgba(242,13,24,.8)]" aria-hidden="true">03</span>
-            <h3 class="mt-4 text-xl font-bold">Stay consistent</h3>
-            <p class="mt-3 text-mute">Give the routine 8–12 honest weeks alongside sensible meals and movement. Progress compounds quietly.</p>
+          <li class="step reveal relative pb-10 pl-16">
+            <span class="node absolute left-0 top-0 grid h-12 w-12 place-items-center rounded-full border border-line bg-white text-fg"><svg class="ico"><use href="#i-drop"/></svg></span>
+            <div class="step-card rounded-3xl border border-line bg-surface p-6 sm:p-7">
+              <p class="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-brand">Step 03 · Once daily</p>
+              <h3 class="display mt-2 text-2xl sm:text-3xl">L-Carnitine 3000 fizz</h3>
+              <p class="mt-2 text-fg2">Drop 1 tablet into 200–250 ml cold water, let it dissolve, and drink. Alternate orange and strawberry.</p>
+            </div>
+          </li>
+          <li class="step reveal relative pl-16">
+            <span class="node absolute left-0 top-0 grid h-12 w-12 place-items-center rounded-full border border-line bg-white text-fg"><svg class="ico"><use href="#i-calendar"/></svg></span>
+            <div class="step-card rounded-3xl border border-line bg-gradient-to-br from-blush to-white p-6 sm:p-7">
+              <p class="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-brand">Every day · 30 days</p>
+              <h3 class="display mt-2 text-2xl sm:text-3xl">Stay consistent</h3>
+              <p class="mt-2 text-fg2">Follow the in-box diet guide and log progress on the tracker. Pair the routine with sensible meals and movement — progress compounds quietly.</p>
+            </div>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- ============================ TRANSPARENCY ============================ -->
-    <section id="transparency" class="section bg-band" aria-labelledby="transparency-title">
-      <div class="wrap">
-        <div class="reveal max-w-2xl">
-          <p class="eyebrow">Transparency</p>
-          <h2 id="transparency-title" class="h2">What ships with <span class="text-brand">every order.</span></h2>
+    <!-- ============================ WHY SUPREME (semi-dark) ============================ -->
+    <section id="why" class="section tone-dark bg-semi overflow-hidden" aria-labelledby="why-title">
+      <div class="wrap grid items-center gap-14 lg:grid-cols-[1fr_1.05fr]">
+        <div>
+          <div class="reveal">
+            <p class="eyebrow">Why Supreme</p>
+            <h2 id="why-title" class="display h2 text-white">Most supplements ask for trust.<br><span class="text-brand">We print the evidence.</span></h2>
+            <p class="mt-5 max-w-xl text-base leading-relaxed text-fg2 sm:text-lg">Supreme Nutrition is an Indian wellness house built on one refusal: we will not ask for your trust and then hide the label.</p>
+          </div>
+
+          <dl class="reveal mt-10 grid grid-cols-3 gap-3" style="--d:100ms">
+            <div class="glass rounded-2xl p-4 sm:p-5"><dd class="display text-[1.9rem] text-white sm:text-5xl"><span data-count="4" data-pad="2">04</span></dd><dt class="mt-2 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-fg2 sm:text-[0.7rem]">Products in kit № 01</dt></div>
+            <div class="glass rounded-2xl p-4 sm:p-5"><dd class="display text-[1.9rem] text-white sm:text-5xl">00</dd><dt class="mt-2 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-fg2 sm:text-[0.7rem]">Hidden blends</dt></div>
+            <div class="rounded-2xl bg-white p-4 sm:p-5"><dd class="display text-[1.9rem] text-brand sm:text-5xl"><span data-count="100">100</span>%</dd><dt class="mt-2 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-ink/70 sm:text-[0.7rem]">Label disclosure</dt></div>
+          </dl>
+
+          <div class="mt-8 grid gap-3">
+            <article class="reveal flex gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition hover:border-brand/40 sm:p-6" style="--d:150ms">
+              <span class="icon-box !border-white/15 !bg-brand !text-white"><svg class="ico"><use href="#i-doc"/></svg></span>
+              <div><h3 class="text-lg font-bold">Full-label transparency</h3><p class="mt-1 text-sm text-mute">Every ingredient and quantity, printed in plain language. If we won’t print it, we won’t sell it.</p></div>
+            </article>
+            <article class="reveal flex gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition hover:border-brand/40 sm:p-6" style="--d:220ms">
+              <span class="icon-box !border-white/15 !bg-brand !text-white"><svg class="ico"><use href="#i-plate"/></svg></span>
+              <div><h3 class="text-lg font-bold">Built for Indian routines</h3><p class="mt-1 text-sm text-mute">Designed around real Indian meals and workdays — before breakfast, before meals, one fizz a day.</p></div>
+            </article>
+            <article class="reveal flex gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition hover:border-brand/40 sm:p-6" style="--d:290ms">
+              <span class="icon-box !border-white/15 !bg-brand !text-white"><svg class="ico"><use href="#i-shield"/></svg></span>
+              <div><h3 class="text-lg font-bold">Quality you can trace</h3><p class="mt-1 text-sm text-mute">Batch codes on every unit and an FSSAI-registered facility behind every kit we ship.</p></div>
+            </article>
+          </div>
         </div>
-        <div class="mt-12 grid gap-5 sm:grid-cols-2">
-          <article class="reveal card card-hover p-8">
-            <h3 class="text-xl font-bold">Complete ingredient label</h3>
-            <p class="mt-3 text-mute">Every ingredient with its exact quantity per capsule or tablet — the same panel you see here is printed on the pack.</p>
-          </article>
-          <article class="reveal card card-hover p-8" style="--d:80ms">
-            <h3 class="text-xl font-bold">No-nonsense formulation</h3>
-            <p class="mt-3 text-mute">No added sugar, no artificial colours, non-GMO, gluten free and vegetarian friendly across all four products.</p>
-          </article>
-          <article class="reveal card card-hover p-8" style="--d:160ms">
-            <h3 class="text-xl font-bold">Certified manufacturing</h3>
-            <p class="mt-3 text-mute">Made by Holybasil Ayurveda Products Pvt. Ltd., Noida — an FSSAI-registered, GMP &amp; ISO certified facility. AYUSH Lic. No. A-5169/2026.</p>
-          </article>
-          <article class="reveal card card-hover p-8" style="--d:240ms">
-            <h3 class="text-xl font-bold">Directions &amp; storage on pack</h3>
-            <p class="mt-3 text-mute">Suggested use, caution and storage instructions printed on every unit — store cool, dry and below 25°C.</p>
-          </article>
+
+        <!-- Unbox with hotspots -->
+        <div class="reveal lg:sticky lg:top-28 lg:self-start" style="--d:120ms">
+          <div class="relative" data-hotspots>
+            <div class="reveal-clip overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_50px_90px_-40px_rgba(0,0,0,.7)]">
+              <img src="assets/img/kit-open.webp" width="1400" height="952" loading="lazy" decoding="async" alt="The fat loss kit open, showing L-Carnitine orange, CutCore, Appetite Control and L-Carnitine strawberry" class="w-full">
+            </div>
+            <button type="button" class="hs" style="--x:28.5%;--y:46%" aria-expanded="false" aria-controls="hs-1" aria-label="About L-Carnitine 3000 Orange"><svg class="ico !h-4 !w-4" stroke-width="3"><use href="#i-plus"/></svg></button>
+            <button type="button" class="hs" style="--x:42%;--y:49%" aria-expanded="false" aria-controls="hs-2" aria-label="About CutCore"><svg class="ico !h-4 !w-4" stroke-width="3"><use href="#i-plus"/></svg></button>
+            <button type="button" class="hs" style="--x:58%;--y:49%" aria-expanded="false" aria-controls="hs-3" aria-label="About Appetite Control"><svg class="ico !h-4 !w-4" stroke-width="3"><use href="#i-plus"/></svg></button>
+            <button type="button" class="hs" style="--x:71.5%;--y:46%" aria-expanded="false" aria-controls="hs-4" aria-label="About L-Carnitine 3000 Strawberry"><svg class="ico !h-4 !w-4" stroke-width="3"><use href="#i-plus"/></svg></button>
+            <div id="hs-1" class="hs-card rounded-2xl bg-white p-4 text-ink shadow-soft" style="--x:28.5%;--y:46%" role="region" aria-label="L-Carnitine 3000 Orange"><p class="text-[0.6rem] font-bold uppercase tracking-[0.18em] text-brand">15 tablets · orange</p><p class="display mt-1 text-lg">L-Carnitine 3000</p><p class="mt-1 text-xs text-smoke">3000 mg L-Carnitine + Vitamin B6 &amp; B12 per tablet. Sugar free.</p></div>
+            <div id="hs-2" class="hs-card rounded-2xl bg-white p-4 text-ink shadow-soft" style="--x:42%;--y:49%" role="region" aria-label="CutCore"><p class="text-[0.6rem] font-bold uppercase tracking-[0.18em] text-brand">30 veg capsules</p><p class="display mt-1 text-lg">CutCore</p><p class="mt-1 text-xs text-smoke">Green tea 95% EGCG 100 mg · green coffee 75 mg · L-theanine 10 mg.</p></div>
+            <div id="hs-3" class="hs-card rounded-2xl bg-white p-4 text-ink shadow-soft" style="--x:58%;--y:49%" role="region" aria-label="Appetite Control"><p class="text-[0.6rem] font-bold uppercase tracking-[0.18em] text-brand">30 veg capsules</p><p class="display mt-1 text-lg">Appetite Control</p><p class="mt-1 text-xs text-smoke">Before meals — feel fuller, reduce cravings, support portion control.</p></div>
+            <div id="hs-4" class="hs-card rounded-2xl bg-white p-4 text-ink shadow-soft" style="--x:71.5%;--y:46%" role="region" aria-label="L-Carnitine 3000 Strawberry"><p class="text-[0.6rem] font-bold uppercase tracking-[0.18em] text-brand">15 tablets · strawberry</p><p class="display mt-1 text-lg">L-Carnitine 3000</p><p class="mt-1 text-xs text-smoke">Same formula, strawberry fizz. Dissolve in 200–250 ml cold water.</p></div>
+          </div>
+          <p class="mt-4 flex items-center gap-2 text-sm text-fg2"><span class="grid h-5 w-5 place-items-center rounded-full bg-white text-brand"><svg class="ico !h-3 !w-3" stroke-width="3"><use href="#i-plus"/></svg></span>Tap the dots to see what each pack does.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ TRANSPARENCY / LABEL EXPLORER (light) ============================ -->
+    <section id="transparency" class="section relative overflow-hidden bg-white" aria-labelledby="transparency-title">
+      <div class="wrap">
+        <div class="grid items-end gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="reveal">
+            <p class="eyebrow">Transparency</p>
+            <h2 id="transparency-title" class="display h2">Read the label<br><span class="text-brand">before you buy.</span></h2>
+          </div>
+          <p class="reveal lead lg:pb-2" style="--d:100ms">The same panel you see here is printed on the pack — quantities per capsule or tablet, nothing rounded off, nothing hidden in a blend.</p>
+        </div>
+
+        <div class="reveal mt-12" style="--d:120ms" data-labels>
+          <div class="inline-flex max-w-full gap-1 overflow-x-auto rounded-full border border-line bg-surface p-1.5 [scrollbar-width:none]" role="tablist" aria-label="Choose a product label">
+            <button type="button" class="ltab" role="tab" id="lt-1" aria-controls="lp-1" aria-selected="true">CutCore</button>
+            <button type="button" class="ltab" role="tab" id="lt-2" aria-controls="lp-2" aria-selected="false" tabindex="-1">Appetite Control</button>
+            <button type="button" class="ltab" role="tab" id="lt-3" aria-controls="lp-3" aria-selected="false" tabindex="-1">L-Carnitine · Orange</button>
+            <button type="button" class="ltab" role="tab" id="lt-4" aria-controls="lp-4" aria-selected="false" tabindex="-1">L-Carnitine · Strawberry</button>
+          </div>
+
+          <!-- CutCore -->
+          <div class="lpanel card-soft mt-6 grid gap-8 p-6 sm:p-10 lg:grid-cols-[0.55fr_1.45fr]" role="tabpanel" id="lp-1" aria-labelledby="lt-1">
+            <button type="button" class="lp-img group relative mx-auto block w-48 sm:w-56" data-lightbox="assets/img/product/cutcore-facts.webp" data-alt="CutCore nutritional information">
+              <img src="assets/img/product/cutcore-facts.webp" width="662" height="1150" loading="lazy" decoding="async" alt="CutCore label — nutritional information" class="w-full drop-shadow-[0_22px_24px_rgba(22,23,26,.25)] transition duration-500 group-hover:scale-105">
+              <span class="mt-3 flex items-center justify-center gap-1.5 text-xs font-semibold text-fg2 group-hover:text-fg"><svg class="ico !h-4 !w-4"><use href="#i-zoom"/></svg>View the printed label</span>
+            </button>
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-3 border-b border-line pb-4">
+                <h3 class="display text-2xl">CutCore · per capsule</h3>
+                <p class="text-xs font-semibold uppercase tracking-[0.14em] text-fg2">Serving 1 capsule · 30 per pack</p>
+              </div>
+              <table class="ltable mt-2 w-full text-sm">
+                <caption class="sr-only">CutCore ingredients per capsule</caption>
+                <thead class="sr-only"><tr><th>Ingredient</th><th>Quantity</th></tr></thead>
+                <tbody>
+                  <tr class="lrow border-b border-line" style="--i:0"><th scope="row" class="py-3 pr-4 text-left font-medium text-fg">Green Tea Extract <span class="text-fg2">(95% EGCG)</span><span class="qbar mt-2 block" style="--v:100"><i style="--i:0"></i></span></th><td class="w-24 py-3 text-right font-semibold text-fg">100 mg</td></tr>
+                  <tr class="lrow border-b border-line" style="--i:1"><th scope="row" class="py-3 pr-4 text-left font-medium text-fg">Green Coffee Bean Extract <span class="text-fg2">(50% chlorogenic acid)</span><span class="qbar mt-2 block" style="--v:75"><i style="--i:1"></i></span></th><td class="py-3 text-right font-semibold text-fg">75 mg</td></tr>
+                  <tr class="lrow border-b border-line" style="--i:2"><th scope="row" class="py-3 pr-4 text-left font-medium text-fg">L-Theanine<span class="qbar mt-2 block" style="--v:10"><i style="--i:2"></i></span></th><td class="py-3 text-right font-semibold text-fg">10 mg</td></tr>
+                  <tr class="lrow border-b border-line" style="--i:3"><th scope="row" class="py-3 pr-4 text-left font-medium text-fg">Grains of Paradise Extract<span class="qbar mt-2 block" style="--v:5"><i style="--i:3"></i></span></th><td class="py-3 text-right font-semibold text-fg">5 mg</td></tr>
+                  <tr class="lrow border-b border-line text-fg2" style="--i:4"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Microcrystalline Cellulose (MCC)</th><td class="py-2.5 text-right">305 mg</td></tr>
+                  <tr class="lrow border-b border-line text-fg2" style="--i:5"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Magnesium Stearate</th><td class="py-2.5 text-right">3 mg</td></tr>
+                  <tr class="lrow border-b border-line text-fg2" style="--i:6"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Colloidal Silicon Dioxide</th><td class="py-2.5 text-right">2 mg</td></tr>
+                  <tr class="lrow" style="--i:7"><th scope="row" class="pt-4 text-left font-bold text-fg">Total</th><td class="pt-4 text-right font-bold text-brand">500 mg</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Appetite Control (as printed on the current label) -->
+          <div class="lpanel card-soft mt-6 grid gap-8 p-6 sm:p-10 lg:grid-cols-[0.55fr_1.45fr]" role="tabpanel" id="lp-2" aria-labelledby="lt-2" hidden>
+            <button type="button" class="lp-img group relative mx-auto block w-48 sm:w-56" data-lightbox="assets/img/product/appetite-facts.webp" data-alt="Appetite Control ingredients composition">
+              <img src="assets/img/product/appetite-facts.webp" width="652" height="1150" loading="lazy" decoding="async" alt="Appetite Control label — ingredients composition" class="w-full drop-shadow-[0_22px_24px_rgba(22,23,26,.25)] transition duration-500 group-hover:scale-105">
+              <span class="mt-3 flex items-center justify-center gap-1.5 text-xs font-semibold text-fg2 group-hover:text-fg"><svg class="ico !h-4 !w-4"><use href="#i-zoom"/></svg>View the printed label</span>
+            </button>
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-3 border-b border-line pb-4">
+                <h3 class="display text-2xl">Appetite Control · per capsule</h3>
+                <p class="text-xs font-semibold uppercase tracking-[0.14em] text-fg2">Serving 1 capsule · 30 per pack</p>
+              </div>
+              <table class="ltable mt-2 w-full text-sm">
+                <caption class="sr-only">Appetite Control ingredients per capsule</caption>
+                <thead class="sr-only"><tr><th>Ingredient</th><th>Quantity</th></tr></thead>
+                <tbody>
+                  <tr class="lrow border-b border-line" style="--i:0"><th scope="row" class="py-3 pr-4 text-left font-medium text-fg">Green Tea Extract <span class="text-fg2">(95% EGCG)</span><span class="qbar mt-2 block" style="--v:100"><i style="--i:0"></i></span></th><td class="w-24 py-3 text-right font-semibold text-fg">100 mg</td></tr>
+                  <tr class="lrow border-b border-line" style="--i:1"><th scope="row" class="py-3 pr-4 text-left font-medium text-fg">Green Coffee Bean Extract <span class="text-fg2">(50% chlorogenic acid)</span><span class="qbar mt-2 block" style="--v:75"><i style="--i:1"></i></span></th><td class="py-3 text-right font-semibold text-fg">75 mg</td></tr>
+                  <tr class="lrow border-b border-line" style="--i:2"><th scope="row" class="py-3 pr-4 text-left font-medium text-fg">L-Theanine<span class="qbar mt-2 block" style="--v:10"><i style="--i:2"></i></span></th><td class="py-3 text-right font-semibold text-fg">10 mg</td></tr>
+                  <tr class="lrow border-b border-line" style="--i:3"><th scope="row" class="py-3 pr-4 text-left font-medium text-fg">Grains of Paradise Extract<span class="qbar mt-2 block" style="--v:5"><i style="--i:3"></i></span></th><td class="py-3 text-right font-semibold text-fg">5 mg</td></tr>
+                  <tr class="lrow border-b border-line text-fg2" style="--i:4"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Microcrystalline Cellulose (MCC)</th><td class="py-2.5 text-right">305 mg</td></tr>
+                  <tr class="lrow border-b border-line text-fg2" style="--i:5"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Magnesium Stearate</th><td class="py-2.5 text-right">3 mg</td></tr>
+                  <tr class="lrow border-b border-line text-fg2" style="--i:6"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Colloidal Silicon Dioxide</th><td class="py-2.5 text-right">2 mg</td></tr>
+                  <tr class="lrow" style="--i:7"><th scope="row" class="pt-4 text-left font-bold text-fg">Total</th><td class="pt-4 text-right font-bold text-brand">500 mg</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- L-Carnitine Orange -->
+          <div class="lpanel card-soft mt-6 grid gap-8 p-6 sm:p-10 lg:grid-cols-[0.55fr_1.45fr]" role="tabpanel" id="lp-3" aria-labelledby="lt-3" hidden>
+            <button type="button" class="lp-img group relative mx-auto block w-28 sm:w-32" data-lightbox="assets/img/product/orange-facts.webp" data-alt="L-Carnitine 3000 Orange nutritional information">
+              <img src="assets/img/product/orange-facts.webp" width="327" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Orange label — nutritional information" class="w-full drop-shadow-[0_22px_24px_rgba(22,23,26,.25)] transition duration-500 group-hover:scale-105">
+              <span class="mt-3 flex items-center justify-center gap-1.5 text-xs font-semibold text-fg2 group-hover:text-fg"><svg class="ico !h-4 !w-4"><use href="#i-zoom"/></svg>View label</span>
+            </button>
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-3 border-b border-line pb-4">
+                <h3 class="display text-2xl">L-Carnitine 3000 · per tablet</h3>
+                <p class="text-xs font-semibold uppercase tracking-[0.14em] text-fg2">1 tablet (5.0 g) · 15 per tube</p>
+              </div>
+              <table class="ltable mt-2 w-full text-sm">
+                <caption class="sr-only">L-Carnitine 3000 Orange nutritional information per tablet</caption>
+                <thead><tr class="text-[0.65rem] uppercase tracking-[0.14em] text-fg2"><th scope="col" class="py-2 text-left font-semibold">Nutrient</th><th scope="col" class="py-2 text-right font-semibold">Per tablet</th><th scope="col" class="w-20 py-2 text-right font-semibold">% RDA*</th></tr></thead>
+                <tbody>
+                  <tr class="lrow border-b border-line" style="--i:0"><th scope="row" class="py-3 pr-4 text-left font-medium text-fg">L-Carnitine<span class="qbar mt-2 block" style="--v:100"><i style="--i:0"></i></span></th><td class="py-3 text-right font-semibold text-fg">3000 mg</td><td class="py-3 text-right text-fg2">—</td></tr>
+                  <tr class="lrow border-b border-line" style="--i:1"><th scope="row" class="py-3 pr-4 text-left font-medium text-fg">Vitamin B6<span class="qbar mt-2 block" style="--v:100"><i style="--i:1"></i></span></th><td class="py-3 text-right font-semibold text-fg">2 mg</td><td class="py-3 text-right text-fg">100%</td></tr>
+                  <tr class="lrow border-b border-line" style="--i:2"><th scope="row" class="py-3 pr-4 text-left font-medium text-fg">Vitamin B12<span class="qbar mt-2 block" style="--v:100"><i style="--i:2"></i></span></th><td class="py-3 text-right font-semibold text-fg">2.2 mcg</td><td class="py-3 text-right text-fg">100%</td></tr>
+                  <tr class="lrow border-b border-line text-fg2" style="--i:3"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Energy</th><td class="py-2.5 text-right">12.7 kcal</td><td class="py-2.5 text-right">0.6%</td></tr>
+                  <tr class="lrow border-b border-line text-fg2" style="--i:4"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Carbohydrate</th><td class="py-2.5 text-right">2.8 g</td><td class="py-2.5 text-right">—</td></tr>
+                  <tr class="lrow border-b border-line text-fg2" style="--i:5"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Total / added sugars</th><td class="py-2.5 text-right">0 g / 0 g</td><td class="py-2.5 text-right">0%</td></tr>
+                  <tr class="lrow border-b border-line text-fg2" style="--i:6"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Protein · Total fat</th><td class="py-2.5 text-right">0 g · 0 g</td><td class="py-2.5 text-right">0%</td></tr>
+                  <tr class="lrow text-fg2" style="--i:7"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Sodium</th><td class="py-2.5 text-right">322 mg</td><td class="py-2.5 text-right">16.1%</td></tr>
+                </tbody>
+              </table>
+              <p class="mt-4 text-xs leading-relaxed text-fg2"><b class="text-fg2">Ingredients:</b> L-Carnitine (3000 mg), acidity regulators (citric acid, sodium bicarbonate), sweetener (sucralose), nature-identical orange flavour, colour (INS 110), stabilizer (INS 1201). *% RDA based on ICMR 2020 for moderate working adults.</p>
+            </div>
+          </div>
+
+          <!-- L-Carnitine Strawberry -->
+          <div class="lpanel card-soft mt-6 grid gap-8 p-6 sm:p-10 lg:grid-cols-[0.55fr_1.45fr]" role="tabpanel" id="lp-4" aria-labelledby="lt-4" hidden>
+            <button type="button" class="lp-img group relative mx-auto block w-28 sm:w-32" data-lightbox="assets/img/product/strawberry-facts.webp" data-alt="L-Carnitine 3000 Strawberry nutritional information">
+              <img src="assets/img/product/strawberry-facts.webp" width="328" height="1150" loading="lazy" decoding="async" alt="L-Carnitine 3000 Strawberry label — nutritional information" class="w-full drop-shadow-[0_22px_24px_rgba(22,23,26,.25)] transition duration-500 group-hover:scale-105">
+              <span class="mt-3 flex items-center justify-center gap-1.5 text-xs font-semibold text-fg2 group-hover:text-fg"><svg class="ico !h-4 !w-4"><use href="#i-zoom"/></svg>View label</span>
+            </button>
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-3 border-b border-line pb-4">
+                <h3 class="display text-2xl">L-Carnitine 3000 · per tablet</h3>
+                <p class="text-xs font-semibold uppercase tracking-[0.14em] text-fg2">1 tablet (5.0 g) · 15 per tube</p>
+              </div>
+              <table class="ltable mt-2 w-full text-sm">
+                <caption class="sr-only">L-Carnitine 3000 Strawberry nutritional information per tablet</caption>
+                <thead><tr class="text-[0.65rem] uppercase tracking-[0.14em] text-fg2"><th scope="col" class="py-2 text-left font-semibold">Nutrient</th><th scope="col" class="py-2 text-right font-semibold">Per tablet</th><th scope="col" class="w-20 py-2 text-right font-semibold">% RDA*</th></tr></thead>
+                <tbody>
+                  <tr class="lrow border-b border-line" style="--i:0"><th scope="row" class="py-3 pr-4 text-left font-medium text-fg">L-Carnitine<span class="qbar mt-2 block" style="--v:100"><i style="--i:0"></i></span></th><td class="py-3 text-right font-semibold text-fg">3000 mg</td><td class="py-3 text-right text-fg2">—</td></tr>
+                  <tr class="lrow border-b border-line" style="--i:1"><th scope="row" class="py-3 pr-4 text-left font-medium text-fg">Vitamin B6<span class="qbar mt-2 block" style="--v:100"><i style="--i:1"></i></span></th><td class="py-3 text-right font-semibold text-fg">2 mg</td><td class="py-3 text-right text-fg">100%</td></tr>
+                  <tr class="lrow border-b border-line" style="--i:2"><th scope="row" class="py-3 pr-4 text-left font-medium text-fg">Vitamin B12<span class="qbar mt-2 block" style="--v:100"><i style="--i:2"></i></span></th><td class="py-3 text-right font-semibold text-fg">2.2 mcg</td><td class="py-3 text-right text-fg">100%</td></tr>
+                  <tr class="lrow border-b border-line text-fg2" style="--i:3"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Energy</th><td class="py-2.5 text-right">12.7 kcal</td><td class="py-2.5 text-right">0.6%</td></tr>
+                  <tr class="lrow border-b border-line text-fg2" style="--i:4"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Carbohydrate</th><td class="py-2.5 text-right">2.8 g</td><td class="py-2.5 text-right">—</td></tr>
+                  <tr class="lrow border-b border-line text-fg2" style="--i:5"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Total / added sugars</th><td class="py-2.5 text-right">0 g / 0 g</td><td class="py-2.5 text-right">0%</td></tr>
+                  <tr class="lrow border-b border-line text-fg2" style="--i:6"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Protein · Total fat</th><td class="py-2.5 text-right">0 g · 0 g</td><td class="py-2.5 text-right">0%</td></tr>
+                  <tr class="lrow text-fg2" style="--i:7"><th scope="row" class="py-2.5 pr-4 text-left font-normal">Sodium</th><td class="py-2.5 text-right">322 mg</td><td class="py-2.5 text-right">16.1%</td></tr>
+                </tbody>
+              </table>
+              <p class="mt-4 text-xs leading-relaxed text-fg2"><b class="text-fg2">Ingredients:</b> L-Carnitine (3000 mg), acidity regulators (citric acid, sodium bicarbonate), sweetener (sucralose), nature-identical strawberry flavour, anticaking agent (INS 551), colour (INS 162). *% RDA based on ICMR 2020 for moderate working adults.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- What ships with every order -->
+        <div class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="reveal card card-hover p-6"><span class="icon-box"><svg class="ico"><use href="#i-doc"/></svg></span><h3 class="mt-5 text-lg font-bold">Complete ingredient label</h3><p class="mt-2 text-sm text-fg2">Every ingredient with its exact quantity per capsule or tablet, printed on the pack.</p></article>
+          <article class="reveal card card-hover p-6" style="--d:80ms"><span class="icon-box"><svg class="ico"><use href="#i-leaf"/></svg></span><h3 class="mt-5 text-lg font-bold">No-nonsense formulation</h3><p class="mt-2 text-sm text-fg2">No added sugar, no artificial colours, non-GMO, gluten free and vegetarian friendly.</p></article>
+          <article class="reveal card card-hover p-6" style="--d:160ms"><span class="icon-box"><svg class="ico"><use href="#i-flask"/></svg></span><h3 class="mt-5 text-lg font-bold">Certified manufacturing</h3><p class="mt-2 text-sm text-fg2">Holybasil Ayurveda Products Pvt. Ltd., Noida — FSSAI-registered, GMP &amp; ISO certified. AYUSH Lic. No. A-5169/2026.</p></article>
+          <article class="reveal card card-hover p-6" style="--d:240ms"><span class="icon-box"><svg class="ico"><use href="#i-box"/></svg></span><h3 class="mt-5 text-lg font-bold">Directions &amp; storage</h3><p class="mt-2 text-sm text-fg2">Suggested use, caution and storage on every unit — store cool, dry and below 25°C.</p></article>
         </div>
       </div>
     </section>
 
     <!-- ============================ FAQ ============================ -->
-    <section id="faq" class="section" aria-labelledby="faq-title">
+    <section id="faq" class="section bg-band" aria-labelledby="faq-title">
       <div class="wrap grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-        <div class="reveal">
+        <div class="reveal lg:sticky lg:top-32 lg:self-start">
           <p class="eyebrow">Questions</p>
-          <h2 id="faq-title" class="h2">Asked, answered.</h2>
+          <h2 id="faq-title" class="display h2">Asked,<br><span class="text-brand">answered.</span></h2>
           <p class="lead">Everything people usually want to know before their first kit.</p>
+          <div class="tone-dark mt-8 rounded-3xl bg-char2 p-6 shadow-lift">
+            <p class="display text-xl">Still unsure?</p>
+            <p class="mt-1 text-sm text-mute">Ask a person on WhatsApp — ingredients, delivery or whether the kit fits your routine.</p>
+            <a class="btn btn-light btn-sm mt-4" href="https://wa.me/917082506088" target="_blank" rel="noopener"><svg class="ico !h-4 !w-4 text-[#25D366]"><use href="#i-wa"/></svg>Chat on WhatsApp</a>
+          </div>
         </div>
         <div class="reveal" style="--d:100ms" data-faq>
           <div class="faq-item"><h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-1" id="faq-b1">When will my order ship?<span class="faq-icon" aria-hidden="true"></span></button></h3>
-            <div class="faq-a" id="faq-1" role="region" aria-labelledby="faq-b1"><div><p class="pb-6 pr-10 text-mute">Orders dispatch within 48 hours from our facility and ship across India. Metro delivery typically takes 2–4 days; other pin codes 4–7 days.</p></div></div></div>
+            <div class="faq-a" id="faq-1" role="region" aria-labelledby="faq-b1"><div><p class="pb-6 pr-10 text-fg2">Orders dispatch within 48 hours from our facility and ship across India. Metro delivery typically takes 2–4 days; other pin codes 4–7 days.</p></div></div></div>
           <div class="faq-item"><h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-2" id="faq-b2">Is the kit FSSAI compliant?<span class="faq-icon" aria-hidden="true"></span></button></h3>
-            <div class="faq-a" id="faq-2" role="region" aria-labelledby="faq-b2"><div><p class="pb-6 pr-10 text-mute">Yes. Every unit is manufactured in an FSSAI-registered, GMP- and ISO-certified facility by Holybasil Ayurveda Products Pvt. Ltd. (AYUSH Lic. No. A-5169/2026), and the full ingredient panel is printed on every pack.</p></div></div></div>
+            <div class="faq-a" id="faq-2" role="region" aria-labelledby="faq-b2"><div><p class="pb-6 pr-10 text-fg2">Yes. Every unit is manufactured in an FSSAI-registered, GMP- and ISO-certified facility by Holybasil Ayurveda Products Pvt. Ltd. (AYUSH Lic. No. A-5169/2026), and the full ingredient panel is printed on every pack.</p></div></div></div>
           <div class="faq-item"><h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-3" id="faq-b3">Do you hide ingredients in proprietary blends?<span class="faq-icon" aria-hidden="true"></span></button></h3>
-            <div class="faq-a" id="faq-3" role="region" aria-labelledby="faq-b3"><div><p class="pb-6 pr-10 text-mute">Never. Every ingredient and its exact quantity per capsule or tablet is printed on the label. What you read on the site is what you read on the pack.</p></div></div></div>
+            <div class="faq-a" id="faq-3" role="region" aria-labelledby="faq-b3"><div><p class="pb-6 pr-10 text-fg2">Never. Every ingredient and its exact quantity per capsule or tablet is printed on the label. What you read on the site is what you read on the pack.</p></div></div></div>
           <div class="faq-item"><h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-4" id="faq-b4">How do I use the four products?<span class="faq-icon" aria-hidden="true"></span></button></h3>
-            <div class="faq-a" id="faq-4" role="region" aria-labelledby="faq-b4"><div><p class="pb-6 pr-10 text-mute">CutCore: 1 capsule 30 minutes before breakfast. Appetite Control: 1 capsule 30 minutes before meals. L-Carnitine 3000 (orange or strawberry): drop 1 effervescent tablet into 200–250 ml cold water, let it fizz, and drink — once daily. The box includes a 30-day diet guide and progress tracker to keep you on schedule.</p></div></div></div>
+            <div class="faq-a" id="faq-4" role="region" aria-labelledby="faq-b4"><div><p class="pb-6 pr-10 text-fg2">CutCore: 1 capsule 30 minutes before breakfast. Appetite Control: 1 capsule 30 minutes before meals. L-Carnitine 3000 (orange or strawberry): drop 1 effervescent tablet into 200–250 ml cold water, let it fizz, and drink — once daily. The box includes a 30-day diet guide and progress tracker to keep you on schedule.</p></div></div></div>
           <div class="faq-item"><h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-5" id="faq-b5">Who should not take this kit?<span class="faq-icon" aria-hidden="true"></span></button></h3>
-            <div class="faq-a" id="faq-5" role="region" aria-labelledby="faq-b5"><div><p class="pb-6 pr-10 text-mute">It is not recommended for pregnant or lactating women, children, or individuals with medical conditions. If you are taking any medication, consult your healthcare professional before use.</p></div></div></div>
+            <div class="faq-a" id="faq-5" role="region" aria-labelledby="faq-b5"><div><p class="pb-6 pr-10 text-fg2">It is not recommended for pregnant or lactating women, children, or individuals with medical conditions. If you are taking any medication, consult your healthcare professional before use.</p></div></div></div>
           <div class="faq-item"><h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-6" id="faq-b6">How soon will I see results?<span class="faq-icon" aria-hidden="true"></span></button></h3>
-            <div class="faq-a" id="faq-6" role="region" aria-labelledby="faq-b6"><div><p class="pb-6 pr-10 text-mute">The kit is built as a 30-day program — follow it daily alongside the included diet guide and sensible movement, and track your progress with the in-box tracker.</p></div></div></div>
+            <div class="faq-a" id="faq-6" role="region" aria-labelledby="faq-b6"><div><p class="pb-6 pr-10 text-fg2">The kit is built as a 30-day program — follow it daily alongside the included diet guide and sensible movement, and track your progress with the in-box tracker.</p></div></div></div>
         </div>
       </div>
     </section>
 
     <!-- ============================ ORDER / CHECKOUT ============================ -->
-    <section id="order" class="section bg-stage relative overflow-hidden" aria-labelledby="order-title">
+    <section id="order" class="section bg-band relative overflow-hidden" aria-labelledby="order-title">
+      <span class="slash left-[-5%] top-[6%] h-3 w-[18%] !opacity-80" aria-hidden="true"></span>
+      <span class="slash left-[-4%] top-[9%] h-1.5 w-[11%] !opacity-80" aria-hidden="true"></span>
       <div class="wrap">
         <div class="reveal max-w-2xl">
           <p class="eyebrow">Checkout</p>
-          <h2 id="order-title" class="h2">Buy the <span class="text-brand">fat loss kit.</span></h2>
-          <p class="lead">This is where you place the order. Choose how many kits you want, then pay with Razorpay or send the same order on WhatsApp.</p>
+          <h2 id="order-title" class="display h2">Buy the<br><span class="text-brand">fat loss kit.</span></h2>
+          <p class="lead">Choose how many kits you want, then pay with Razorpay or send the same order on WhatsApp.</p>
         </div>
 
         <div class="mt-12 grid gap-6 lg:grid-cols-[1fr_0.85fr] lg:items-start">
           <!-- Form -->
           <form id="checkout-form" data-checkout class="reveal card p-6 sm:p-9" novalidate autocomplete="on" aria-describedby="checkout-status">
-            <h3 class="text-xl font-bold">Complete your purchase</h3>
-            <div class="mt-5 flex flex-wrap items-end justify-between gap-x-6 gap-y-2 border-b border-white/10 pb-5">
+            <div class="flex items-center justify-between gap-4">
+              <h3 class="display text-2xl">Complete your purchase</h3>
+              <span class="hidden items-center gap-1.5 rounded-full bg-paper px-3 py-1.5 text-[0.65rem] font-bold uppercase tracking-wider text-smoke sm:inline-flex"><svg class="ico !h-3.5 !w-3.5 text-brand"><use href="#i-shield"/></svg>Secure · Razorpay</span>
+            </div>
+            <div class="mt-5 flex flex-wrap items-end justify-between gap-x-6 gap-y-2 border-b border-ink/10 pb-5">
               <div>
-                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-mute">Order total</p>
-                <p class="mt-1 text-4xl font-extrabold tracking-tight text-white" data-card-total>₹3,499</p>
+                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-smoke">Order total</p>
+                <p class="display mt-1 text-5xl text-ink" data-card-total>₹3,499</p>
               </div>
-              <p class="pb-1 text-sm text-mute"><span class="line-through">MRP ₹3,999</span> per kit · taxes included · free shipping</p>
+              <p class="pb-1 text-sm text-smoke"><span class="line-through">MRP ₹3,999</span> per kit · taxes included · free shipping</p>
             </div>
             <div class="mt-6 grid gap-x-5 gap-y-4 sm:grid-cols-2">
               <div data-api-only>
@@ -481,10 +795,10 @@
               </div>
               <div data-qty-wrap>
                 <span class="label" id="qty-label">Quantity</span>
-                <div class="flex h-[3.2rem] w-full items-center justify-between rounded-xl border border-white/15 bg-white/[0.04] px-1.5" role="group" aria-labelledby="qty-label">
-                  <button type="button" class="grid h-10 w-10 place-items-center rounded-lg text-xl text-white transition hover:bg-white/10" data-qty="-1" aria-label="Decrease quantity">−</button>
-                  <output class="text-lg font-semibold text-white" id="qty-out" aria-live="polite">1</output>
-                  <button type="button" class="grid h-10 w-10 place-items-center rounded-lg text-xl text-white transition hover:bg-white/10" data-qty="1" aria-label="Increase quantity">+</button>
+                <div class="flex h-[3.4rem] w-full items-center justify-between rounded-xl border border-ink/15 bg-paper px-1.5" role="group" aria-labelledby="qty-label">
+                  <button type="button" class="grid h-11 w-11 place-items-center rounded-lg text-xl text-ink transition hover:bg-ink hover:text-white" data-qty="-1" aria-label="Decrease quantity">−</button>
+                  <output class="display text-2xl text-ink" id="qty-out" aria-live="polite">1</output>
+                  <button type="button" class="grid h-11 w-11 place-items-center rounded-lg text-xl text-ink transition hover:bg-ink hover:text-white" data-qty="1" aria-label="Increase quantity">+</button>
                 </div>
               </div>
             </div>
@@ -494,30 +808,30 @@
                 <span class="spinner hidden" aria-hidden="true" data-spinner></span>
                 <span data-pay-label>Buy Now</span>
               </button>
-              <button type="button" class="btn btn-wa flex-1" data-wa>Order on WhatsApp</button>
+              <button type="button" class="btn btn-outline flex-1" data-wa><svg class="ico !h-5 !w-5 text-[#1faa53]"><use href="#i-wa"/></svg>Order on WhatsApp</button>
             </div>
             <div id="checkout-status" class="mt-5 hidden rounded-2xl border p-4 text-sm leading-relaxed" role="status" aria-live="polite" tabindex="-1"></div>
-            <p class="mt-5 text-xs leading-relaxed text-mute" data-static-only>Buy Now opens Razorpay, where you enter your delivery address and pay. Your order is confirmed only after Razorpay sends the payment receipt. If you have already paid, don’t send a second order on WhatsApp.</p>
-            <p class="mt-5 text-xs leading-relaxed text-mute" data-api-only>Payments are processed by Razorpay and confirmed on our server. Your order is marked paid only after the payment signature is verified. If you have already paid, please don’t place a second order on WhatsApp.</p>
+            <p class="mt-5 text-xs leading-relaxed text-smoke" data-static-only>Buy Now opens Razorpay, where you enter your delivery address and pay. Your order is confirmed only after Razorpay sends the payment receipt. If you have already paid, don’t send a second order on WhatsApp.</p>
+            <p class="mt-5 text-xs leading-relaxed text-smoke" data-api-only>Payments are processed by Razorpay and confirmed on our server. Your order is marked paid only after the payment signature is verified. If you have already paid, please don’t place a second order on WhatsApp.</p>
           </form>
 
           <!-- Summary -->
-          <aside class="reveal card p-6 sm:p-9 lg:sticky lg:top-24" style="--d:120ms" aria-label="Order summary">
+          <aside class="reveal card tone-dark !border-transparent !bg-char2 p-6 sm:p-9 lg:sticky lg:top-28" style="--d:120ms" aria-label="Order summary">
             <img src="assets/img/kit-hero.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Fat loss kit — 30-day program, open box with four products" class="aspect-[3/2] w-full rounded-2xl border border-white/10 object-cover">
-            <h3 class="mt-6 text-xl font-bold">Fat loss kit — 30-day program</h3>
+            <h3 class="display mt-6 text-2xl">Fat loss kit — 30-day program</h3>
             <p class="mt-1 text-sm text-mute">CutCore · Appetite Control · L-Carnitine 3000 (orange &amp; strawberry) · diet guide &amp; progress tracker</p>
             <dl class="mt-6 space-y-3 border-t border-white/10 pt-6 text-sm">
               <div class="flex justify-between"><dt class="text-mute">Price per kit</dt><dd class="font-medium text-white">₹3,499</dd></div>
               <div class="flex justify-between"><dt class="text-mute">MRP</dt><dd class="text-mute line-through">₹3,999</dd></div>
               <div class="flex justify-between"><dt class="text-mute">Quantity</dt><dd class="font-medium text-white" data-sum-qty>1</dd></div>
-              <div class="flex justify-between"><dt class="text-mute">Shipping</dt><dd class="font-medium text-white">Free across India</dd></div>
-              <div class="flex items-end justify-between border-t border-white/10 pt-4"><dt class="text-base font-semibold text-white">Order total</dt><dd class="text-3xl font-extrabold text-white" data-total>₹3,499</dd></div>
+              <div class="flex justify-between"><dt class="text-mute">Shipping</dt><dd class="font-medium text-[#6ee7a0]">Free across India</dd></div>
+              <div class="flex items-end justify-between border-t border-white/10 pt-4"><dt class="text-base font-semibold text-white">Order total</dt><dd class="display text-4xl text-white" data-total>₹3,499</dd></div>
             </dl>
             <p class="mt-2 text-xs text-mute">Inclusive of all taxes · Launch offer</p>
-            <ul class="mt-6 space-y-2 border-t border-white/10 pt-6 text-sm text-mute">
-              <li>• Orders dispatch within 48 hours</li>
-              <li>• Metro delivery 2–4 days · other pin codes 4–7 days</li>
-              <li>• <a href="#policies" class="text-white underline decoration-brand underline-offset-4">Shipping, returns &amp; policies</a></li>
+            <ul class="mt-6 space-y-2.5 border-t border-white/10 pt-6 text-sm text-mute">
+              <li class="flex gap-2.5"><svg class="ico !h-4 !w-4 text-brand"><use href="#i-box"/></svg>Orders dispatch within 48 hours</li>
+              <li class="flex gap-2.5"><svg class="ico !h-4 !w-4 text-brand"><use href="#i-truck"/></svg>Metro 2–4 days · other pin codes 4–7 days</li>
+              <li class="flex gap-2.5"><svg class="ico !h-4 !w-4 text-brand"><use href="#i-doc"/></svg><a href="#policies" class="text-white underline decoration-brand underline-offset-4">Shipping, returns &amp; policies</a></li>
             </ul>
           </aside>
         </div>
@@ -525,31 +839,33 @@
     </section>
 
     <!-- ============================ POLICIES ============================ -->
-    <section id="policies" class="section bg-band !py-16 sm:!py-20" aria-labelledby="policies-title">
+    <section id="policies" class="section bg-paper !py-16 sm:!py-20" aria-labelledby="policies-title">
       <div class="wrap">
         <div class="reveal max-w-2xl">
           <p class="eyebrow">Policies</p>
-          <h2 id="policies-title" class="h2 !text-3xl sm:!text-4xl">Shipping, returns &amp; legal</h2>
+          <h2 id="policies-title" class="display h2 !text-3xl sm:!text-5xl">Shipping, returns &amp; legal</h2>
         </div>
         <div class="reveal mt-10 grid gap-3 md:grid-cols-2" data-faq-plain>
-          <details id="shipping" class="card group p-6 open:border-brand/40"><summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-white">Shipping policy<span class="text-brand transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-4 text-sm leading-relaxed text-mute">Free shipping across India. Orders dispatch within 48 hours from our facility. Metro delivery typically takes 2–4 days; other pin codes 4–7 days.</p></details>
-          <details id="returns" class="card group p-6"><summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-white">Returns &amp; refunds<span class="text-brand transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-4 text-sm leading-relaxed text-mute">Final return &amp; refund copy is pending. The return window is yet to be published by the business — please <a class="text-white underline decoration-brand underline-offset-4" href="mailto:supremenutrition17@gmail.com">email us</a> before ordering if you need it confirmed.</p></details>
-          <details id="privacy" class="card group p-6"><summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-white">Privacy policy<span class="text-brand transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-4 text-sm leading-relaxed text-mute">Supreme Nutrition Enterprises uses order and contact details to deliver your kit, handle payment and support, and meet legal duties. We do not sell personal information. <a class="text-white underline decoration-brand underline-offset-4" href="privacy.html">Read the privacy policy</a>.</p></details>
-          <details id="terms" class="card group p-6"><summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-white">Terms of use<span class="text-brand transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-4 text-sm leading-relaxed text-mute">Final terms copy is pending. GSTIN and registered-address details are to be added by the business before launch.</p></details>
-          <details id="disclaimer" class="card group p-6 md:col-span-2"><summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-white">Disclaimer<span class="text-brand transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-4 text-sm leading-relaxed text-mute">Not recommended for pregnant or lactating women, children, or individuals with medical conditions. If you are taking any medication, consult your healthcare professional before use. Store in a cool, dry place below 25°C and keep out of reach of children.</p></details>
+          <details id="shipping" class="card group p-6 open:border-brand/40"><summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-fg">Shipping policy<span class="text-xl text-brand transition group-open:rotate-45" aria-hidden="true">+</span></summary><ul class="mt-4 space-y-2 text-sm leading-relaxed text-fg2"><li><b class="text-fg">Free shipping</b> on every order across India.</li><li><b class="text-fg">Dispatch:</b> within 48 hours of payment (not on Sundays or public holidays).</li><li><b class="text-fg">Delivery:</b> metro cities 2–4 working days; other PIN codes 4–7.</li><li><b class="text-fg">Tracking:</b> sent on WhatsApp or email once your order ships.</li></ul><a class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-fg underline decoration-brand underline-offset-4" href="shipping-policy.html">Read the full shipping policy <svg class="ico !h-4 !w-4"><use href="#i-arrow"/></svg></a></details>
+          <details id="returns" class="card group p-6 open:border-brand/40"><summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-fg">Returns &amp; refunds<span class="text-xl text-brand transition group-open:rotate-45" aria-hidden="true">+</span></summary><ul class="mt-4 space-y-2 text-sm leading-relaxed text-fg2"><li><b class="text-fg">Before dispatch:</b> cancel for a full refund.</li><li><b class="text-fg">Damaged, missing or wrong item:</b> tell us within 48 hours of delivery with photos — we replace or refund it.</li><li><b class="text-fg">Returns:</b> within 10 days of delivery, unopened with the seal intact.</li><li><b class="text-fg">Refunds:</b> to the original payment method, usually 5–7 business days.</li></ul><a class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-fg underline decoration-brand underline-offset-4" href="refund-policy.html">Read the full refund policy <svg class="ico !h-4 !w-4"><use href="#i-arrow"/></svg></a></details>
+          <details id="privacy" class="card group p-6 open:border-brand/40"><summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-fg">Privacy policy<span class="text-xl text-brand transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-4 text-sm leading-relaxed text-fg2">Supreme Nutrition Enterprises uses order and contact details to deliver your kit, handle payment and support, and meet legal duties. We do not sell personal information. <a class="text-fg underline decoration-brand underline-offset-4" href="privacy.html">Read the privacy policy</a>.</p></details>
+          <details id="terms" class="card group p-6 open:border-brand/40"><summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-fg">Terms of use<span class="text-xl text-brand transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-4 text-sm leading-relaxed text-fg2">You must be 18 or over to order. Our products are supplements, not medicines — follow the label and ask your doctor if you have a medical condition. Prices include all taxes, and an order is confirmed once payment is received. <a class="text-fg underline decoration-brand underline-offset-4" href="terms.html">Read the terms of use</a>.</p></details>
+          <details id="disclaimer" class="card group p-6 open:border-brand/40 md:col-span-2"><summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-fg">Disclaimer<span class="text-xl text-brand transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-4 text-sm leading-relaxed text-fg2">Not recommended for pregnant or lactating women, children, or individuals with medical conditions. If you are taking any medication, consult your healthcare professional before use. Store in a cool, dry place below 25°C and keep out of reach of children. This product is not intended to diagnose, treat, cure or prevent any disease.</p></details>
         </div>
       </div>
     </section>
 
-    <!-- ============================ CONTACT + NOTIFY ============================ -->
-    <section id="contact" class="section" aria-labelledby="contact-title">
-      <div class="wrap grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+    <!-- ============================ CONTACT ============================ -->
+    <section id="contact" class="section bg-white" aria-labelledby="contact-title">
+      <div class="wrap grid grid-cols-1 gap-12 lg:grid-cols-[0.85fr_1.15fr] [&>*]:min-w-0">
         <div class="reveal">
           <p class="eyebrow">Still curious</p>
-          <h2 id="contact-title" class="h2">Write to a <span class="text-brand">human.</span></h2>
+          <h2 id="contact-title" class="display h2">Write to a<br><span class="text-brand">human.</span></h2>
           <p class="lead">Questions on ingredients, shipping, or whether the kit fits your routine — ask away. A person replies, not a bot.</p>
-          <p class="mt-6 text-sm text-mute">WhatsApp: <a class="font-medium text-white underline decoration-brand underline-offset-4" href="https://wa.me/917082506088" target="_blank" rel="noopener">+91 70825 06088</a></p>
-          <p class="mt-2 text-sm text-mute">Email: <a class="font-medium text-white underline decoration-brand underline-offset-4" href="mailto:supremenutrition17@gmail.com">supremenutrition17@gmail.com</a></p>
+          <div class="mt-8 grid grid-cols-[minmax(0,1fr)] gap-3 sm:max-w-md">
+            <a class="group flex items-center gap-4 rounded-2xl border border-line bg-surface p-4 transition hover:border-[#25D366]/60" href="https://wa.me/917082506088" target="_blank" rel="noopener"><span class="grid h-11 w-11 place-items-center rounded-full bg-[#25D366]/15 text-[#25D366]"><svg class="ico"><use href="#i-wa"/></svg></span><span><span class="block text-xs uppercase tracking-[0.14em] text-fg2">WhatsApp</span><span class="font-semibold text-fg">+91 70825 06088</span></span><svg class="ico arr ml-auto !h-4 !w-4 text-fg2 transition group-hover:translate-x-1 group-hover:text-fg"><use href="#i-arrow"/></svg></a>
+            <a class="group flex items-center gap-4 rounded-2xl border border-line bg-surface p-4 transition hover:border-brand/60" href="mailto:supremenutrition17@gmail.com"><span class="grid h-11 w-11 place-items-center rounded-full bg-brand/15 text-brand"><svg class="ico"><use href="#i-mail"/></svg></span><span class="min-w-0"><span class="block text-xs uppercase tracking-[0.14em] text-fg2">Email</span><span class="block truncate font-semibold text-fg">supremenutrition17@gmail.com</span></span><svg class="ico arr ml-auto !h-4 !w-4 text-fg2 transition group-hover:translate-x-1 group-hover:text-fg"><use href="#i-arrow"/></svg></a>
+          </div>
         </div>
         <form id="contact-form" class="reveal card grid gap-4 p-6 sm:p-9" style="--d:100ms" novalidate>
           <div class="grid gap-4 sm:grid-cols-2">
@@ -557,44 +873,49 @@
             <div><label class="label" for="c-email">Email address</label><input class="field" id="c-email" name="email" type="email" required maxlength="120" autocomplete="email"></div>
           </div>
           <div><label class="label" for="c-msg">What would you like to know?</label><textarea class="field resize-none" id="c-msg" name="message" rows="4" required maxlength="1500"></textarea></div>
-          <button type="submit" class="btn btn-primary w-fit">Send message</button>
+          <button type="submit" class="btn btn-primary w-fit">Send message <svg class="ico arr !h-4 !w-4"><use href="#i-arrow"/></svg></button>
           <p class="hidden rounded-xl border p-3 text-sm" role="status" aria-live="polite" data-form-status></p>
         </form>
       </div>
     </section>
 
-    <section class="relative overflow-hidden border-y border-white/10 py-16" aria-labelledby="notify-title" style="background:linear-gradient(120deg,#a8000a 0%,#4a0006 55%,#0a0a0a 100%)">
-      <div class="wrap text-center">
-        <h2 id="notify-title" class="mx-auto max-w-xl text-3xl font-extrabold sm:text-4xl">Your wellness chapter starts here.</h2>
-        <p class="mx-auto mt-4 max-w-md text-white/80">Launch offers and new kits land first with the list. One email a month, nothing more.</p>
-        <form id="notify-form" class="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row" novalidate>
-          <label class="sr-only" for="n-email">Email address</label>
-          <input class="field !rounded-full !border-white/30 !bg-white/10 !px-6" id="n-email" name="email" type="email" placeholder="you@example.com" required maxlength="120" autocomplete="email">
-          <button type="submit" class="btn bg-white text-ink hover:bg-silver">Notify me</button>
-        </form>
-        <p class="mt-4 hidden text-sm" role="status" aria-live="polite" data-form-status></p>
+    <!-- ============================ NOTIFY (semi-dark) ============================ -->
+    <section class="tone-dark bg-semi relative overflow-hidden py-16 sm:py-20" aria-labelledby="notify-title">
+      <img src="assets/img/logo.webp" width="256" height="256" alt="" loading="lazy" class="pointer-events-none absolute -bottom-24 -right-20 hidden w-72 rotate-12 opacity-[0.12] mix-blend-luminosity md:block" aria-hidden="true">
+      <div class="wrap relative grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <div class="reveal">
+          <h2 id="notify-title" class="display text-[2.2rem] leading-[0.95] text-white sm:text-5xl">Your wellness chapter<br><span class="text-brand">starts here.</span></h2>
+          <p class="mt-4 max-w-md text-fg2">Launch offers and new kits land first with the list. One email a month, nothing more.</p>
+        </div>
+        <div class="reveal" style="--d:100ms">
+          <form id="notify-form" class="flex flex-col gap-3 rounded-full sm:flex-row sm:bg-white sm:p-1.5" novalidate>
+            <label class="sr-only" for="n-email">Email address</label>
+            <input class="w-full rounded-full bg-white px-6 py-3.5 text-ink placeholder:text-ink/40 focus:outline-none sm:bg-transparent" id="n-email" name="email" type="email" placeholder="you@example.com" required maxlength="120" autocomplete="email">
+            <button type="submit" class="btn btn-primary shrink-0">Notify me <svg class="ico arr !h-4 !w-4"><use href="#i-arrow"/></svg></button>
+          </form>
+          <p class="mt-4 hidden text-sm" role="status" aria-live="polite" data-form-status></p>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- ============================ FOOTER ============================ -->
-  <footer class="bg-ink pb-28 pt-16 lg:pb-12">
+  <footer class="tone-dark relative overflow-hidden bg-night pb-28 pt-16 lg:pb-10">
     <div class="wrap">
       <div class="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
-          <a href="#top" class="flex items-center gap-3"><img src="assets/img/logo.webp" width="56" height="56" loading="lazy" alt="Supreme Nutrition logo" class="h-14 w-14 rounded-full"><span class="font-bold tracking-wide text-white">SUPREME <span class="font-medium text-brand">NUTRITION</span></span></a>
+          <a href="#top" class="flex items-center gap-3"><img src="assets/img/logo.webp" width="56" height="56" loading="lazy" alt="Supreme Nutrition logo" class="h-14 w-14 rounded-full"><span class="display text-xl !not-italic leading-none text-white">SUPREME<span class="block text-[0.66rem] font-bold tracking-[0.42em] text-brand">NUTRITION</span></span></a>
           <p class="mt-5 max-w-xs text-sm leading-relaxed text-mute">An Indian wellness house with one rule: if we won’t print it on the label, we won’t put it in the kit.</p>
-          <p class="mt-5 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-silver/70">Made in India · Ships across India</p>
+          <p class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-silver/70"><span class="flex h-3 w-5 flex-col overflow-hidden rounded-[2px]" aria-hidden="true"><i class="flex-1 bg-[#FF9933]"></i><i class="flex-1 bg-white"></i><i class="flex-1 bg-[#138808]"></i></span>Made in India · Ships across India</p>
         </div>
         <nav aria-label="Shop">
           <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-white">Shop</h3>
           <ul class="mt-5 space-y-3 text-sm text-mute">
-            <li><a class="transition hover:text-white" href="#shop">Weight Management</a></li>
-            <li><a class="transition hover:text-white" href="#shop">Wellness Kits</a></li>
+            <li><a class="transition hover:text-white" href="#shop">Fat loss kit</a></li>
+            <li><a class="transition hover:text-white" href="#inside">Inside the kit</a></li>
             <li class="flex items-center gap-2 text-mute/70">Men’s Wellness <span class="chip !py-0.5 !text-[0.6rem]">Soon</span></li>
             <li class="flex items-center gap-2 text-mute/70">Women’s Wellness <span class="chip !py-0.5 !text-[0.6rem]">Soon</span></li>
             <li class="flex items-center gap-2 text-mute/70">Energy &amp; Performance <span class="chip !py-0.5 !text-[0.6rem]">Soon</span></li>
-            <li class="flex items-center gap-2 text-mute/70">Daily Nutrition <span class="chip !py-0.5 !text-[0.6rem]">Soon</span></li>
           </ul>
         </nav>
         <nav aria-label="Help">
@@ -602,21 +923,23 @@
           <ul class="mt-5 space-y-3 text-sm text-mute">
             <li><a class="transition hover:text-white" href="#faq">FAQ</a></li>
             <li><a class="transition hover:text-white" href="#contact">Contact</a></li>
-            <li><a class="transition hover:text-white" href="#shipping" data-open-policy>Shipping policy</a></li>
-            <li><a class="transition hover:text-white" href="#returns" data-open-policy>Returns &amp; refunds</a></li>
+            <li><a class="transition hover:text-white" href="shipping-policy.html">Shipping policy</a></li>
+            <li><a class="transition hover:text-white" href="refund-policy.html">Returns &amp; refunds</a></li>
           </ul>
         </nav>
         <nav aria-label="Legal">
           <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-white">Legal</h3>
           <ul class="mt-5 space-y-3 text-sm text-mute">
             <li><a class="transition hover:text-white" href="privacy.html">Privacy policy</a></li>
-            <li><a class="transition hover:text-white" href="#terms" data-open-policy>Terms of use</a></li>
+            <li><a class="transition hover:text-white" href="refund-policy.html">Refund policy</a></li>
+            <li><a class="transition hover:text-white" href="terms.html">Terms of use</a></li>
             <li><a class="transition hover:text-white" href="#disclaimer" data-open-policy>Disclaimer</a></li>
           </ul>
         </nav>
       </div>
-      <div class="mt-14 border-t border-white/10 pt-8 text-xs leading-relaxed text-mute">
-        <p>The privacy policy is published. Terms, shipping, returns and the product disclaimer are still being finalised.</p>
+      <p class="footer-mark display pointer-events-none mt-14 select-none whitespace-nowrap text-center text-[17vw] leading-[0.8] lg:text-[14rem]" aria-hidden="true">SUPREME</p>
+      <div class="border-t border-white/10 pt-8 text-xs leading-relaxed text-mute">
+        <p>*Support claims as printed on the pack. These products are not intended to diagnose, treat, cure or prevent any disease.</p>
         <p class="mt-3">© 2026 Supreme Nutrition. All rights reserved.</p>
         <p class="mt-3">Marketed by: Gole Market, 5A, Model Town, Panipat, Haryana 132103 · Manufactured by: Holybasil Ayurveda Products Pvt. Ltd., Noida · AYUSH Lic. No. A-5169/2026 · <a class="underline decoration-brand underline-offset-4 hover:text-white" href="https://wa.me/917082506088" target="_blank" rel="noopener">+91 70825 06088</a> · <a class="underline decoration-brand underline-offset-4 hover:text-white" href="mailto:supremenutrition17@gmail.com">supremenutrition17@gmail.com</a></p>
       </div>
@@ -624,9 +947,9 @@
   </footer>
 
   <!-- Sticky mobile purchase bar -->
-  <div class="safe-bottom fixed inset-x-0 bottom-0 z-40 translate-y-full border-t border-white/10 bg-ink/90 px-4 pt-3 backdrop-blur-xl transition-transform duration-300 lg:hidden" data-sticky-bar aria-hidden="true">
+  <div class="safe-bottom fixed inset-x-0 bottom-0 z-40 translate-y-full border-t border-line bg-white/90 px-4 pt-3 backdrop-blur-xl transition-transform duration-300 lg:hidden" data-sticky-bar aria-hidden="true">
     <div class="mx-auto flex max-w-md items-center justify-between gap-4">
-      <div class="leading-tight"><p class="text-lg font-extrabold text-white">₹3,499 <span class="text-xs font-normal text-mute line-through">₹3,999</span></p><p class="text-[0.7rem] text-mute">Fat loss kit · Free shipping</p></div>
+      <div class="leading-tight"><p class="display text-xl text-fg">₹3,499 <span class="font-sans text-xs font-normal not-italic text-smoke line-through">₹3,999</span></p><p class="text-[0.7rem] text-smoke">Fat loss kit · Free shipping</p></div>
       <a href="#order" class="btn btn-primary !min-h-[2.8rem] !px-6" data-buy tabindex="-1">Buy Now</a>
     </div>
   </div>
@@ -639,7 +962,7 @@
     </form>
   </dialog>
 
-  <script src="assets/js/config.js?v=2"></script>
-  <script src="assets/js/main.js?v=2" defer></script>
+  <script src="assets/js/config.js?v=6"></script>
+  <script src="assets/js/main.js?v=5" defer></script>
 </body>
 </html>
