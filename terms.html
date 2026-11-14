@@ -29,7 +29,7 @@
         <a class="nav-link" href="index.html#contact">Contact</a>
       </nav>
       <div class="flex items-center gap-3">
-        <a href="index.html#order" class="btn btn-primary !min-h-[2.6rem] !px-5 !text-sm">Buy Now</a>
+        <a href="index.html#order" class="btn btn-primary !min-h-[2.6rem] !px-5 !text-sm" data-buy>Buy Now</a>
         <button type="button" class="grid h-11 w-11 place-items-center rounded-full border border-line lg:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-btn>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path data-menu-icon d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -123,6 +123,8 @@
     </div>
   </footer>
 
+  <script src="assets/js/config.js?v=7"></script>
+  <script src="assets/js/buy.js?v=1"></script>
   <script>
     (function () {
       var btn = document.querySelector('[data-menu-btn]');

@@ -111,7 +111,7 @@
           <svg class="ico !h-[1.35rem] !w-[1.35rem]"><use href="#i-bag"/></svg>
           <span class="cart-badge absolute right-0.5 top-0.5 grid h-[1.15rem] min-w-[1.15rem] place-items-center rounded-full bg-brand px-1 text-[0.62rem] font-bold text-white" data-cart-count>1</span>
         </a>
-        <a href="#order" class="btn btn-primary btn-sm hidden sm:inline-flex" data-magnet>Buy Now <svg class="ico arr !h-4 !w-4"><use href="#i-arrow"/></svg></a>
+        <a href="#order" class="btn btn-primary btn-sm hidden sm:inline-flex" data-buy data-magnet>Buy Now <svg class="ico arr !h-4 !w-4"><use href="#i-arrow"/></svg></a>
         <button type="button" class="grid h-11 w-11 place-items-center rounded-full border border-line lg:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-btn>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path data-menu-icon d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -126,7 +126,7 @@
         <a class="border-b border-line py-3.5 font-medium text-fg" href="#why">Why Supreme</a>
         <a class="border-b border-line py-3.5 font-medium text-fg" href="#transparency">Transparency</a>
         <a class="border-b border-line py-3.5 font-medium text-fg" href="#faq">FAQ</a>
-        <a class="btn btn-primary mt-4" href="#order">Buy Now — ₹3,499</a>
+        <a class="btn btn-primary mt-4" href="#order" data-buy>Buy Now — ₹3,499</a>
       </nav>
     </div>
   </header>
@@ -962,7 +962,8 @@
     </form>
   </dialog>
 
-  <script src="assets/js/config.js?v=6"></script>
-  <script src="assets/js/main.js?v=5" defer></script>
+  <script src="assets/js/config.js?v=7"></script>
+  <script src="assets/js/buy.js?v=1" defer></script>
+  <script src="assets/js/main.js?v=7" defer></script>
 </body>
 </html>
