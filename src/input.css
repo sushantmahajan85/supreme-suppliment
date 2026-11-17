@@ -222,7 +222,14 @@ html:not(.js) .swoosh path { stroke-dashoffset: 0; }
   filter: grayscale(0.55) contrast(1.08) brightness(1.05);
   opacity: 0.62; mix-blend-mode: luminosity; user-select: none; pointer-events: none;
 }
+/* female athlete: same treatment, beside the male one (left), facing the centre */
+.stage .athlete-f {
+  left: 27%; bottom: 36%; height: 62%;
+  translate: calc(-50% + var(--mx, 0) * -6px) calc(var(--my, 0) * -4px);
+  filter: grayscale(1) contrast(1.1) brightness(1.2);
+}
 .js .stage .athlete { opacity: 0; transition: opacity 1.6s ease 0.2s; }
+.js .stage .athlete-f { transition-delay: 0.45s; }
 .js .is-ready .stage .athlete { opacity: 0.62; }
 .stage .ring {
   position: absolute; left: 50%; top: 40%; width: 72%; aspect-ratio: 1; translate: -50% -50%; z-index: 0;
